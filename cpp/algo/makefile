@@ -1,5 +1,7 @@
-avl:
-	g++ avl.cpp -o avl -g -std=c++11
+SOURCE := $(wildcard *.cpp)
+EXEC := $(SOURCE:.cpp=)
+OBJ := $(SOURCE:.cpp=.o)
+CC := g++ -std=c++11
 
-heap:
-	g++ heap.cpp -o heap -g -std=c++11
+$(EXEC): %: %.cpp
+	$(CC) -o $@ $^
