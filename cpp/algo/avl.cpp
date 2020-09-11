@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <assert.h>
 #include <zl/debug.h>
+using namespace zl;
 using namespace std;
 
 
