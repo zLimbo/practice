@@ -9,6 +9,7 @@ using namespace zl;
 using namespace std;
 
 
+
 struct TreeNode {
     enum COLOR { RED, BLACK };
 
@@ -23,16 +24,36 @@ struct TreeNode {
         val(val_), color(color_), parent(parent_), left(left_), right(right_) {}
 };
 
-
+bool haveError = false;
 class RBTree {
 
 private:
 
     TreeNode* root = nullptr;
+	TreeNode* hot = nullptr;
 
 	TreeNode* minValue(TreeNode* tn) {
 		while (tn->left) tn = tn->left;
 		return tn;
+	}
+
+	int  blackHeight(TreeNode* tn) {
+		if (!tn) return 1;
+		return blackHeight(tn->left) + (tn->color == TreeNode::BLACK);
+	} 
+
+	int  checkBlackHeight(TreeNode* tn) {
+		if (!tn) return 1;
+		int lbh = checkBlackHeight(tn->left);
+		int rbh = checkBlackHeight(tn->right);
+		if (lbh != rbh) {
+			cout << "errTn : " << lbh << " " << rbh << endl;
+			show(tn);
+			show(tn->left);
+			show(tn->right);
+			assert(0);
+		}	
+		return lbh + (tn->color == TreeNode::BLACK);
 	}
 
     TreeNode* leftRotate(TreeNode* parent) {
@@ -80,8 +101,10 @@ private:
     }
 
     void insertModifyColor(TreeNode* hot) {
-		cout << "Insert: " << hot->val << " " << (hot->parent ? hot->parent->val : -1) << endl;
+#ifdef DEBUG
+		cout << "\nInsert: " << hot->val << " " << (hot->parent ? hot->parent->val : -1) << endl;
 		show();
+#endif
         if (hot == root) {
             hot->color = TreeNode::BLACK;
             return;
@@ -112,28 +135,24 @@ private:
         }
     }
 
-    TreeNode* insert(TreeNode* tn, TreeNode* hot) {
-        if (!tn) return hot;
-        if (hot->val < tn->val) {
-            tn->left = insert(tn->left, hot);
+    TreeNode* insert(TreeNode* tn, int val, TreeNode*& hot) {
+        if (!tn) return hot = new TreeNode(val, TreeNode::RED);
+        if (val < tn->val) {
+            tn->left = insert(tn->left, val, hot);
             tn->left->parent = tn;
         } 
-		else if (hot->val > tn->val) {
-            tn->right = insert(tn->right, hot);
+		else if (val > tn->val) {
+            tn->right = insert(tn->right, val, hot);
             tn->right->parent = tn;
         }
-		else {
-			TreeNode* tmp = tn;
-			hot->color = tn->color;
-			tn = hot;
-			delete tmp;
-		}
         return tn;
     }
 
 	void removeModifyColor(TreeNode* hot) {
-		cout << "modify: " << hot->val << endl;
+#ifdef DEBUG
+		cout << "\nModify: " << hot->val << endl;
 		show();
+#endif
 		if (hot == root) return;	
 		if (hot->color == TreeNode::RED) {
 			hot->color = TreeNode::BLACK;
@@ -189,11 +208,15 @@ private:
 					rc->color = parent->color;
 					parent->color = TreeNode::BLACK;
 					leftRotate(brother);
+#ifdef DEBUG
 					cout << "leftRotate: " << endl;
 					show();
+#endif
 					rightRotate(parent);
+#ifdef DEBUG
 					cout << "rightRotate: " << endl;
 					show();
+#endif
 				}
 				else {
 					brother->color = TreeNode::RED;
@@ -219,8 +242,10 @@ private:
 					child->color = TreeNode::BLACK; 
 				else if (tn->color == TreeNode::BLACK) {// BLACK, BLACK
 					removeModifyColor(tn); 
+#ifdef DEBUG
 					cout << "Modify successed" << endl;
 					show();
+#endif
 				}
 				if (tn->parent) {
 					if (child) child->parent = tn->parent;
@@ -248,7 +273,8 @@ private:
         }
         cout << prefix + (isLeft ? "┗━━━ " : "┏━━━ ");
         print(tn->color == TreeNode::RED ? RED : BLACE, 
-                to_string(tn->val) + "[" + to_string(tn->parent ? tn->parent->val : -1) + "]");
+                to_string(tn->val) + "[" + to_string(tn->parent ? tn->parent->val : -1) + "]"
+				+ "[" + to_string(blackHeight(tn)) + "]");
         if (tn->left) {
             show(tn->left, prefix + (isLeft ? "     " : "┃    "), true);
         }
@@ -257,13 +283,19 @@ private:
 public:
 
     void insert(int val) {
-        TreeNode* hot = new TreeNode(val, TreeNode::RED);
-        root = insert(root, hot);
-        insertModifyColor(hot);
+        TreeNode* hot = nullptr;
+        root = insert(root, val, hot);
+        if (hot) insertModifyColor(hot);
+#ifdef DEBUG
+		cout << "\nInsert success: " << endl;
+		show();
+#endif
+		checkBlackHeight(root);
     }
 
     void remove(int val) {
         remove(root, val);
+		checkBlackHeight(root);
     }
 
 	int size() {
@@ -277,11 +309,12 @@ public:
 };
 
 int main() {
+	int N = 100;
 
     RBTree rbt;
 
 	vector<int> v;
-    for (int i = 0; i < 2000; ++i) {
+    for (int i = 0; i < N; ++i) {
         int val = rand() % 1000;
 		v.push_back(val);
         cout << val << " ";
@@ -296,7 +329,7 @@ int main() {
     string op, num;
     cout << ">>> ";
     //while (cin >> op >> num) {
-	for (int i = 0; i < 10000; ++i) {
+	for (int i = 0; i < N; ++i) {
 		 op = rand() % 2 ? "-" : "+";
 		int x = rand() % 1000;
 	//for (int x: v) {
