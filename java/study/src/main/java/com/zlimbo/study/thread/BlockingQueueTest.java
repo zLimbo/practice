@@ -1,4 +1,4 @@
-package com.zlimbo.study;
+package com.zlimbo.study.thread;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.PriorityBlockingQueue;

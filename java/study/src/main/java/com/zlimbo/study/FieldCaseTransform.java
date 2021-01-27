@@ -45,9 +45,12 @@ public class FieldCaseTransform {
 
 //        System.out.println(JSONObject.toJSONString(smallHumpToUpperUnderline(JSONObject.parseObject(jsonStr)), true));
 
-        JSONObject json = new JSONObject();
-        Map<String, String> map = null;
-        json.putAll(map);
+//        JSONObject json = new JSONObject();
+//        Map<String, String> map = null;
+//        json.putAll(map);
+
+        JSONObject json = JSONObject.parseObject(jsonStr);
+        System.out.println(JSONObject.toJSONString(smallHumpToUpperUnderline(json), true));
     }
 
     /**
@@ -243,34 +246,38 @@ public class FieldCaseTransform {
             "    \"sm4Iv\": \"sm4Iv\",\n" +
             "    \"systemId\": \"systemId\",\n" +
             "    \"dataInfo\": {\n" +
-            "        \"timestamps\": \"1601712721\",\n" +
-            "        \"taxesPoint\": \"17%\",\n" +
-            "        \"sellerName\": \"华东师大\",\n" +
-            "        \"taxes\": \"150\",\n" +
-            "        \"invoiceDate\": \"2020-10-03\",\n" +
-            "        \"consumerTaxesNo\": \"12100000425006133D\",\n" +
-            "        \"sellerTaxesNo\": \"913100003245878130\",\n" +
-            "        \"price\": \"1000\",\n" +
-            "        \"statementSheet\": \"1\",\n" +
-            "        \"pricePlusTaxes\": \"1000\",\n" +
-            "        \"invoiceNumber\": \"1\",\n" +
-            "        \"invoiceType\": \"增值税\",\n" +
-            "        \"statementWeight\": \"1kg\",\n" +
-            "        \"invoiceNo\": \"3100982170\",\n" +
-            "        \"consumerName\": \"数据学院\"\n" +
+            "        \"timestamps\": \"timestamps\",\n" +
+            "        \"taxesPoint\": \"taxesPoint\",\n" +
+            "        \"sellerName\": \"sellerName\",\n" +
+            "        \"taxes\": \"taxes\",\n" +
+            "        \"invoiceDate\": \"invoiceDate\",\n" +
+            "        \"consumerTaxesNo\": \"consumerTaxesNo\",\n" +
+            "        \"sellerTaxesNo\": \"sellerTaxesNo\",\n" +
+            "        \"price\": \"price\",\n" +
+            "        \"statementSheet\": \"statementSheet\",\n" +
+            "        \"pricePlusTaxes\": \"pricePlusTaxes\",\n" +
+            "        \"invoiceNumber\": \"invoiceNumber\",\n" +
+            "        \"invoiceType\": \"invoiceType\",\n" +
+            "        \"statementWeight\": \"statementWeight\",\n" +
+            "        \"invoiceNo\": \"invoiceNo\",\n" +
+            "        \"consumerName\": \"consumerName\"\n" +
             "    },\n" +
             "    \"businessId\": \"businessId\",\n" +
             "    \"keyId\": \"keyId\",\n" +
+            "    \"kNN\": \"kNN\",\n" +
             "    \"publicKey\": \"publicKey\",\n" +
             "    \"tableName\": \"invoice\",\n" +
             "    \"accountId\": \"accountId\",\n" +
             "    \"privateKey\": \"privateKey\",\n" +
             "    \"sm4Key\": \"sm4Key\",\n" +
-            "    \"requestSn\": \"c36aac94-0997-44bf-941f-e10d64daf64a\",\n" +
-            "    \"invokeTime\": \"2019-03-05 11:11:11.12\",\n" +
-            "    \"callbackUrl\": \"http://127.0.0.1:8082/callback\"\n" +
+            "    \"requestSn\": \"requestSn\",\n" +
+            "    \"invokeTime\": \"invokeTime\",\n" +
+            "    \"callbackUrl\": \"callbackUrl\"\n" +
             "}";
 }
+
+
+
 
 
 
