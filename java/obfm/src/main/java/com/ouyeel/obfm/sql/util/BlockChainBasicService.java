@@ -89,7 +89,7 @@ public class BlockChainBasicService {
      * @param
      * @return
      */
-    public static Map<String, String> obtainKey(String keyId, String accountId) {
+    public Map<String, String> obtainKey(String keyId, String accountId) {
         Map<String, String> map = new HashMap<>();
 
         String publicKey = "2204404536ab867d9a964bfcc5e6fdaa7d77e509ce5891d38b3ebbb036e5c225994597ea6d0bdff3539fd3062b3943a1c7dd75d173f35101b71298e9f7f08d51";

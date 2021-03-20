@@ -14,7 +14,8 @@ import com.alibaba.fastjson.JSONObject;
 //import com.baosight.obmp.chain.sql.util.CommonUtils;
 import com.ouyeel.obfm.sql.basic.CommonConstant;
 import com.ouyeel.obfm.sql.basic.ExceptionCode;
-import com.ouyeel.obfm.sql.callback.producer.CallbackProducer;
+import com.ouyeel.obfm.sql.callback.CallbackHandle;
+//import com.ouyeel.obfm.sql.callback.producer.CallbackProducer;
 import com.ouyeel.obfm.sql.config.ChainConfig;
 import com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl;
 import com.ouyeel.obfm.sql.exception.BusinessException;
@@ -50,7 +51,9 @@ public abstract class ChainManager {
 
     private BlockChainBasicService blockChainBasicService;
     private ChainDaoImpl commonDao;
-    private CallbackProducer producer;
+//    private CallbackProducer producer;
+
+    private CallbackHandle callbackHandle;
 
     private String tableName;
 
@@ -62,12 +65,12 @@ public abstract class ChainManager {
 
     //初始化参数
     private void init() {
-//        this.blockChainBasicService = (BlockChainBasicService) ApplicationContextUtil.getBean(BlockChainBasicService.class);
-//        this.commonDao = (ChainDaoImpl) ApplicationContextUtil.getBean(ChainDaoImpl.class);
+        this.blockChainBasicService = (BlockChainBasicService) ApplicationContextUtil.getBean(BlockChainBasicService.class);
+        this.commonDao = (ChainDaoImpl) ApplicationContextUtil.getBean(ChainDaoImpl.class);
 //        this.producer = (CallbackProducer) ApplicationContextUtil.getBean(CallbackProducer.class);
-        this.blockChainBasicService = new BlockChainBasicService();
-        this.commonDao = new ChainDaoImpl();
-        this.producer = new CallbackProducer();
+//        this.blockChainBasicService = new BlockChainBasicService();
+
+        this.callbackHandle = (CallbackHandle) ApplicationContextUtil.getBean(CallbackHandle.class);
 
         initTableName();
     }
@@ -158,11 +161,12 @@ public abstract class ChainManager {
         try {
             BusinessExecutors.getThreadPool().submit(() -> {
                 try {
-                    TimeUnit.MILLISECONDS.sleep(Long.valueOf(CALLBACK_SEND_SLEEP));
+                    TimeUnit.MILLISECONDS.sleep(Long.parseLong(CALLBACK_SEND_SLEEP));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                producer.send(CommonConstant.AGENT_STORAGE_QUEUE, sb.toString());
+//                producer.send(CommonConstant.AGENT_STORAGE_QUEUE, sb.toString());
+                callbackHandle.process(sb.toString());
             });
         } catch (Exception e) {
             e.printStackTrace();

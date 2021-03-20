@@ -1,0 +1,62 @@
+2021-03-20 14:52:29 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 14:52:29 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 803 ms
+2021-03-20 14:52:29 |ERROR |main |JakartaCommonsLoggingImpl.java:19 |com.ibatis.common.jdbc.SimpleDataSource |SimpleDataSource: Error while loading properties. Cause: java.lang.ClassNotFoundException: spring.datasource.driver-class-name
+java.lang.ClassNotFoundException: spring.datasource.driver-class-name
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.ibatis.common.resources.Resources.classForName(Resources.java:265)
+	at com.ibatis.common.resources.Resources.instantiate(Resources.java:281)
+	at com.ibatis.common.jdbc.SimpleDataSource.initialize(SimpleDataSource.java:199)
+	at com.ibatis.common.jdbc.SimpleDataSource.<init>(SimpleDataSource.java:116)
+	at com.ibatis.sqlmap.engine.datasource.SimpleDataSourceFactory.initialize(SimpleDataSourceFactory.java:31)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapConfigParser$9.process(SqlMapConfigParser.java:347)
+	at com.ibatis.common.xml.NodeletParser.processNodelet(NodeletParser.java:121)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:105)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:102)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:102)
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:72)
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:51)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapConfigParser.parse(SqlMapConfigParser.java:86)
+	at com.ibatis.sqlmap.client.SqlMapClientBuilder.buildSqlMapClient(SqlMapClientBuilder.java:63)
+	at com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl.<clinit>(ChainDaoImpl.java:35)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1279)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.ouyeel.obfm.ObfmApplication.main(ObfmApplication.java:10)
+2021-03-20 14:52:29 |ERROR |main |ChainDaoImpl.java:40 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |Error occurred.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/transactionManager/dataSource/end()'.  Cause: com.ibatis.sqlmap.client.SqlMapException: Error initializing DataSource.  Could not instantiate DataSourceFactory.  Cause: java.lang.RuntimeException: SimpleDataSource: Error while loading properties. Cause: java.lang.ClassNotFoundException: spring.datasource.driver-class-name
+2021-03-20 14:52:29 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 14:52:30 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 14:57:50 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 14:57:50 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 802 ms
+2021-03-20 14:57:50 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 14:57:50 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 14:59:59 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 14:59:59 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 765 ms
+2021-03-20 14:59:59 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 14:59:59 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 15:00:16 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 15:00:16 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 3 ms
