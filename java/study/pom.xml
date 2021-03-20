@@ -7,24 +7,20 @@
     <groupId>org.example</groupId>
     <artifactId>study</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <properties>
-        <java.version>1.8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
@@ -38,13 +34,6 @@
             <groupId>org.apache.ibatis</groupId>
             <artifactId>ibatis-sqlmap</artifactId>
             <version>2.3.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.75</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.citahub.cita/core -->
@@ -85,14 +74,13 @@
             <version>1.2.3</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.jxta.platform/jxta -->
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
-            <groupId>org.jxta.platform</groupId>
-            <artifactId>jxta</artifactId>
-            <version>2.3.6</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
         </dependency>
 
     </dependencies>
-
 
 </project>

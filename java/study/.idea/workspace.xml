@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f57ffcd6-850c-4579-aa19-8df2c374b9bc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../spingstudy/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/src/main/java/com/zlimbo/spingstudy/SpingstudyApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/src/main/java/com/zlimbo/spingstudy/bean/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/src/main/java/com/zlimbo/spingstudy/bean/UserRepositoryImps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/src/main/java/com/zlimbo/spingstudy/bean/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spingstudy/src/test/java/com/zlimbo/spingstudy/SpingstudyApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/annotation/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/annotation/range/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/annotation/range/Range.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/annotation/range/RangeCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/blockchain/zlimbochain/Block.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/blockchain/zlimbochain/Chain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/blockchain/zlimbochain/Net.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/blockchain/zlimbochain/PeerNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/blockchain/zlimbochain/TestChain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/blockchain/zlimbochain/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/blockchain/zlimbochain/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/breakpointresume/FileAccessI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/breakpointresume/FileSplitterFetch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/breakpointresume/SiteFileFetch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/breakpointresume/SiteInfoBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/breakpointresume/TestMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/breakpointresume/Utility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/digest/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/io/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/json/FieldCaseTransform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/json/JSONObjectTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/json/PostJsonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/string/StringTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/thread/BlockingQueueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/thread/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/study/thread/ThreadPoolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/annotation/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/annotation/range/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/annotation/range/Range.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/annotation/range/RangeCheck.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Block.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Chain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Net.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/PeerNode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/TestChain.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Transaction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Util.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/breakpointresume/FileAccessI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/breakpointresume/FileSplitterFetch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/breakpointresume/SiteFileFetch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/breakpointresume/SiteInfoBean.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/breakpointresume/TestMethod.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/breakpointresume/Utility.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/digest/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/io/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/json/FieldCaseTransform.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/json/JSONObjectTest$User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/json/JSONObjectTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/json/PostJsonTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/string/StringTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/thread/BlockingQueueTest$Obj.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/thread/BlockingQueueTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/thread/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/study/thread/ThreadPoolTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.jxta/jxta.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/FieldCaseTransform.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/JSONObjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/PostJsonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/StringTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/annotation/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/blockchain/noobchain/Block.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/blockchain/noobchain/NoobChain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/blockchain/noobchain/StringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/blockchain/zlimbochain/Block.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/jxta/HelloJXTA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/jxta/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/thread/BlockingQueueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/thread/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/thread/ThreadPoolTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/FieldCaseTransform.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/JSONObjectTest$User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/JSONObjectTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/PostJsonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/StringTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/annotation/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/blockchain/noobchain/Block.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/blockchain/noobchain/NoobChain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/blockchain/noobchain/StringUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/blockchain/zlimbochain/Block$Header.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/blockchain/zlimbochain/Block.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/jxta/HelloJXTA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/jxta/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/thread/BlockingQueueTest$Obj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/thread/BlockingQueueTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/thread/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zlimbo/study/thread/ThreadPoolTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit3 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\z\bin\maven_repository" />
+        <option name="userSettingsFile" value="C:\z\bin\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1prlVOEi3wzXZHyWkdgHgUwEULc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\z\practice\java\study\src\main\java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="study.annotation.range" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.RangeCheckTest.rangeCheckTest">
+    <configuration name="PostJsonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.json.PostJsonTest" />
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="study.json.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RangeCheckTest.rangeCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="study.annotation.range.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="study.annotation.range" />
+      <option name="MAIN_CLASS_NAME" value="study.annotation.range.RangeCheckTest" />
+      <option name="METHOD_NAME" value="rangeCheckTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RangeCheckTest.rangeCheckTest" />
+        <item itemvalue="Application.PostJsonTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f57ffcd6-850c-4579-aa19-8df2c374b9bc" name="Default Changelist" comment="" />
+      <created>1615949113119</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615949113119</updated>
+      <workItem from="1615949115384" duration="990000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
