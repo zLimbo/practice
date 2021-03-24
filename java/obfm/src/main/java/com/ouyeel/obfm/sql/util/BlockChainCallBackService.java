@@ -34,6 +34,9 @@ public class BlockChainCallBackService {
     @Autowired
     private ChainDaoImpl commonDao;
 
+    @Autowired
+    private StateParse stateParse;
+
 //    //上链结果通知次数
 //    private static final String NOTICE_NUM = PlatApplicationContext.getProperty("eplat.obmp.dr.sc.notice.num");
 //    //上链结果查询次数
@@ -52,7 +55,7 @@ public class BlockChainCallBackService {
     //上链结果查询间隔
     private static final String QUERY_INTERVAL = "5000";
 
-    public void callBack(String callbackServiceId, String tableName, String requestSn) {
+    public void callback(String callbackServiceId, String tableName, String requestSn) {
         logger.info("上链结果通知参数：callbackServiceId : [" + callbackServiceId + "],tableName:[" + tableName + "],requestSn:[" + requestSn + "]");
 
         Map<String, String> map = null;
@@ -135,5 +138,64 @@ public class BlockChainCallBackService {
         callBackMap.put(ChainConfig.LOWERCASE_BLOCK_TIME, map.get(ChainConfig.BLOCK_TIME));
         callBackMap.put(ChainConfig.LOWERCASE_BLOCK_HEIGHT, map.get(ChainConfig.BLOCK_HEIGHT));
         return callBackMap;
+    }
+
+
+
+    public void callbackStateCount(String callbackUrl, String tableName, String stateHash) {
+        logger.info("上链结果通知参数：callbackUrl : [" + callbackUrl + "],tableName:[" + tableName + "],stateHash:[" + stateHash + "]");
+
+        String result = null;
+        for (int i = 1; i <= Integer.parseInt(QUERY_NUM); i++) {
+            result = commonDao.queryCallbackState(tableName, ChainConfig.LOWERCASE_COUNT_TX, stateHash);
+            logger.info("上链结果查询第[" + i + "]次, result: [{}], length: [{}]", result, result.length());
+
+            if (StringUtils.isNotEmpty(result)) {
+                break;
+            }
+
+            try {
+                logger.warn("上链结果查询，第[" + i + "]次未查到结果。");
+                TimeUnit.MILLISECONDS.sleep(Long.parseLong(QUERY_INTERVAL));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (result == null) {
+            logger.warn("状态查询失败，tableName:[" + tableName + "],stateHash:[" + stateHash + "],不存在.");
+            return;
+        }
+
+        logger.debug("last char ascii: [{}]", (int) result.charAt(result.length() - 1));
+        result = result.substring(0, result.length() - 1);
+        String count = stateParse.getCount(result)[0];
+
+        JSONObject callBackJson = new JSONObject();
+        callBackJson.put(ChainConfig.LOWERCASE_COUNT, count);
+
+        logger.debug("callback json: [{}]", callBackJson);
+
+        for (int i = 1; i <= Integer.parseInt(NOTICE_NUM); i++) {
+            String response = null;
+            try {
+                response = HttpUtil.send(callbackUrl, callBackJson, "UTF-8");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            if (StringUtils.isNotEmpty(response)) {
+                JSONObject json = JSONObject.parseObject(response);
+                if (json.getBoolean(ChainConfig.SUCCESS)) {
+                    logger.debug("callback success ...");
+                    break;
+                }
+            }
+            logger.warn("结果通知失败，重试。");
+            try {
+                TimeUnit.SECONDS.sleep(Long.parseLong(CALLBACK_INTERVAL));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

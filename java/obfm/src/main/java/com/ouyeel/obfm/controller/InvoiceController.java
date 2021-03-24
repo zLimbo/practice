@@ -3,13 +3,16 @@ package com.ouyeel.obfm.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.ouyeel.obfm.sql.ChainManager;
 import com.ouyeel.obfm.sql.InvoiceChainManager;
+import com.ouyeel.obfm.sql.config.ChainConfig;
+import com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl;
+import com.ouyeel.obfm.sql.util.CommonUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -19,8 +22,14 @@ public class InvoiceController {
 
     private ChainManager chainManager = new InvoiceChainManager();
 
+//    public InvoiceController() {
+//        super();
+//        chainManager.init();
+//    }
+
     @RequestMapping("/")
     public String hello() {
+        chainManager.test();
         return "hello world!";
     }
 
@@ -32,13 +41,59 @@ public class InvoiceController {
     @RequestMapping(value = "/obst/service/S_ST_01",
             method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     String upChain(@RequestBody JSONObject inJson) {
-        logger.debug("[upChain] start");
+        logger.debug("inJson: \n" + JSONObject.toJSONString(inJson, true));
 
-        inJson.put("requestSn", UUID.randomUUID().toString());
+        inJson.put(ChainConfig.LOWERCASE_INVOKE_TIME, String.valueOf(System.currentTimeMillis()));
+        inJson.put(ChainConfig.LOWERCASE_REQUEST_SN, UUID.randomUUID().toString());
 
         String txHash = chainManager.executor(inJson);
-        logger.debug("[upChain] end");
-        return txHash;
+        JSONObject outJson = new JSONObject();
+        outJson.put(ChainConfig.TX_HASH, txHash);
+        logger.debug("txHash: [{}]", txHash);
+        return outJson.toJSONString();
+    }
+
+
+    /**
+     * 状态查询之交易数目查询
+     * @param inJson
+     * @return
+     */
+    @RequestMapping(value = "/obst/service/S_ST_06",
+            method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+    String queryState(@RequestBody JSONObject inJson) {
+        inJson = CommonUtils.smallHumpToUpperUnderline(inJson);
+        logger.debug("inJson: \n" + JSONObject.toJSONString(inJson, true));
+
+        String stateHash = chainManager.queryCount(inJson);
+        JSONObject outJson = new JSONObject();
+        outJson.put(ChainConfig.STATE_HASH, stateHash);
+        logger.debug("stateHash: [{}]", stateHash);
+        return outJson.toJSONString();
+    }
+
+
+    /**
+     * 回调发送响应处
+     * @param inJson
+     * @return
+     * @throws IOException
+     */
+    @PostMapping("/callback")
+    @ResponseBody
+    String callback(@RequestBody JSONObject inJson) throws IOException {
+        logger.debug("============> [callback] start");
+        logger.debug("callback data:\n" + JSONObject.toJSONString(inJson, true));
+//        List<String> onChainTx = Arrays.asList(
+//                (String)inJson.get(ChainConfig.TX_HASH),
+//                (String)inJson.get(ChainConfig.BLOCK_TIME),
+//                (String)inJson.get(ChainConfig.BLOCK_HEIGHT));
+//        onChainTxList.add(onChainTx);
+        JSONObject successJson = new JSONObject();
+        successJson.put("success", true);
+        successJson.put("msg", "回调接收成功");
+        logger.debug("============> [callback] end");
+        return successJson.toJSONString();
     }
 
 }

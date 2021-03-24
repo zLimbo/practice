@@ -36,6 +36,19 @@ public class ChainConfig {
     final public static String CODE = "CODE";
     final public static String MSG = "MSG";
 
+    /**
+     * 状态查询
+     */
+    final public static String STATE = "STATE";
+    final public static String COUNT = "COUNT";
+    final public static String LATEST_THREE_DATE = "LATEST_THREE_DATE";
+    final public static String STATE_HASH = "STATE_HASH";
+
+
+    final public static String LOWERCASE_STATE = "state";
+    final public static String LOWERCASE_COUNT = "count";
+    final public static String LOWERCASE_COUNT_TX = "count_tx";
+
 
     /**
      * 接口公共字段
@@ -53,7 +66,7 @@ public class ChainConfig {
     final public static String LOWERCASE_BLOCK_HEIGHT = "blockNumber";
 
 
-    final public static String CALLBAKC_SERVICEID = "callbackServiceId";
+    final public static String CALLBACK_SERVICE_ID = "callbackServiceId";
 
 
 

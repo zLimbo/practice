@@ -52,8 +52,8 @@ public class ChainDaoImpl implements IChainDao {
     public boolean insertTx(Map<String, String> paramMap) {
         logger.info("insertTx start paramMap: [{}]", paramMap);
         try {
-            Object insertResult =  sqlMapClient.insert("insertTx", paramMap);
-            logger.info("insertResult: [{}]", insertResult);
+            Object result =  sqlMapClient.insert("insertTx", paramMap);
+            logger.info("result: [{}]", result);
         } catch (SQLException e) {
             logger.error("insertTx fail  [{}]",e.getMessage());
             e.printStackTrace();
@@ -67,15 +67,15 @@ public class ChainDaoImpl implements IChainDao {
     public String queryTxHashByRequestSn(String tableName, String requestSn) {
         logger.debug("queryTxHashByRequestSn start");
         String txHash = null;
-        Map<String, String> queryParamMap = new HashMap<>();
-        queryParamMap.put(ChainConfig.TABLE_NAME, tableName);
-        queryParamMap.put(ChainConfig.REQUEST_SN, requestSn);
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put(ChainConfig.TABLE_NAME, tableName);
+        paramMap.put(ChainConfig.REQUEST_SN, requestSn);
         logger.debug("queryTxHashByRequestSn...");
         try {
-            List<Map<String, String>> queryResulList =
-                    sqlMapClient.queryForList("queryTxHashByRequestSn", queryParamMap);
-            Map<String, String> queryResultMap = queryResulList.get(0);
-            txHash = queryResultMap.get(ChainConfig.TX_HASH);
+            List<Map<String, String>> list =
+                    sqlMapClient.queryForList("queryTxHashByRequestSn", paramMap);
+            Map<String, String> map = list.get(0);
+            txHash = map.get(ChainConfig.TX_HASH);
             logger.debug("txHash: [{}]", txHash);
         } catch (SQLException e) {
             logger.debug("queryTxHashByRequestSn fail");
@@ -89,13 +89,13 @@ public class ChainDaoImpl implements IChainDao {
     @Override
     public List<Map<String, String>> queryAllByTxHash(String tableName, String txHash) {
         logger.debug("queryAllByTxHash start");
-        Map<String, String> queryParamMap = new HashMap<>();
-        queryParamMap.put(ChainConfig.TABLE_NAME, tableName);
-        queryParamMap.put(ChainConfig.TX_HASH, txHash);
-        List<Map<String, String>> queryResulList = null;
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put(ChainConfig.TABLE_NAME, tableName);
+        paramMap.put(ChainConfig.TX_HASH, txHash);
+        List<Map<String, String>> list;
         logger.debug("queryAllByTxHash...");
         try {
-            queryResulList = sqlMapClient.queryForList("queryAllByTxHash", queryParamMap);
+            list = sqlMapClient.queryForList("queryAllByTxHash", paramMap);
         } catch (SQLException e) {
             logger.debug("queryAllByTxHash fail");
             logger.error(e.getMessage());
@@ -103,20 +103,20 @@ public class ChainDaoImpl implements IChainDao {
             return null;
         }
         logger.debug("queryAllByTxHash end");
-        return queryResulList;
+        return list;
     }
 
 
     @Override
     public List<Map<String, String>> queryAllByRequestSn(String tableName, String requestSn) {
         logger.debug("queryAllByRequestSn start");
-        Map<String, String> queryParamMap = new HashMap<>();
-        queryParamMap.put(ChainConfig.TABLE_NAME, tableName);
-        queryParamMap.put(ChainConfig.REQUEST_SN, requestSn);
-        List<Map<String,String>> queryResulList = null;
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put(ChainConfig.TABLE_NAME, tableName);
+        paramMap.put(ChainConfig.REQUEST_SN, requestSn);
+        List<Map<String,String>> list;
         logger.debug("queryAllByRequestSn...");
         try {
-            queryResulList = sqlMapClient.queryForList("queryAllByRequestSn", queryParamMap);
+            list = sqlMapClient.queryForList("queryAllByRequestSn", paramMap);
         } catch (SQLException e) {
             logger.debug("queryAllByRequestSn fail");
             logger.error(e.getMessage());
@@ -124,7 +124,7 @@ public class ChainDaoImpl implements IChainDao {
             return null;
         }
         logger.debug("queryAllByRequestSn end");
-        return queryResulList;
+        return list;
     }
 
 
@@ -132,15 +132,14 @@ public class ChainDaoImpl implements IChainDao {
     public List<Map<String, String>> queryCallbackByRequestSn(String tableName, String requestSn) {
         logger.info("queryCallbackByRequestSn start");
         logger.info("queryCallbackByRequestSn tableName:["+tableName+"],requestSn:["+requestSn+"]");
-        Map<String, String> queryParamMap = new HashMap<>();
-        queryParamMap.put(ChainConfig.TABLE_NAME, tableName);
-        queryParamMap.put(ChainConfig.REQUEST_SN, requestSn);
-        List<Map<String, String>> queryResulList = null;
-        logger.debug("queryByTxHash...");
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put(ChainConfig.TABLE_NAME, tableName);
+        paramMap.put(ChainConfig.REQUEST_SN, requestSn);
+        List<Map<String, String>> list;
         try {
-            logger.info("queryCallbackByRequestSn param : [{}]",queryParamMap);
-            queryResulList = sqlMapClient.queryForList("queryCallbackByRequestSn", queryParamMap);
-            logger.info("queryByTxHash result:[{}]",queryResulList);
+            logger.info("queryCallbackByRequestSn param : [{}]",paramMap);
+            list = sqlMapClient.queryForList("queryCallbackByRequestSn", paramMap);
+            logger.info("queryByTxHash result:[{}]",list);
         } catch (SQLException e) {
             logger.debug("queryByTxHash fail");
             logger.error(e.getMessage());
@@ -149,9 +148,129 @@ public class ChainDaoImpl implements IChainDao {
         }
         logger.info("queryByTxHash success");
         logger.debug("queryCallbackByRequestSn end");
-        return queryResulList;
+        return list;
     }
 
+
+
+    /**
+     * 状态查询通用接口
+     * @param tableName 数据表名
+     * @param state 状态参数
+     * @return 哈希
+     */
+    public String queryState(String tableName, String state) {
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put(ChainConfig.TABLE_NAME, tableName);
+        paramMap.put(ChainConfig.STATE, state);
+        List<Map<String, String>> list = null;
+        logger.debug("paramMap: " + paramMap);
+        try {
+            list = sqlMapClient.queryForList("queryState", paramMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            logger.error(e.getMessage());
+            return null;
+        }
+        if (list == null) {
+            return null;
+        }
+        Map<String, String> map = list.get(0);
+        String txHash = map.get(ChainConfig.LOWERCASE_STATE);
+        return txHash;
+    }
+
+    /**
+     * 状态回调查询
+     * @param tableName
+     * @param stateHash
+     * @return
+     */
+    public String queryCallbackState(String tableName, String state, String stateHash) {
+        logger.debug("tableName: [{}], stateHash: [{}]", tableName, stateHash);
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put(ChainConfig.TABLE_NAME, tableName);
+        paramMap.put(ChainConfig.STATE, state);
+        paramMap.put(ChainConfig.STATE_HASH, stateHash);
+        List<Map<String, String>> list = null;
+        try {
+            list = sqlMapClient.queryForList("queryCallbackState", paramMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            logger.error(e.getMessage());
+            return null;
+        }
+        if (list == null) {
+            return null;
+        }
+        Map<String, String> map = list.get(0);
+        String result = map.get(ChainConfig.LOWERCASE_STATE);
+        return result;
+    }
+
+
+    public void test() {
+        try {
+            sqlMapClient.queryForList("test");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+//    @Override
+//    public String queryCount(String tableName) {
+//        logger.debug("queryCount - tableName: [" + tableName + "]");
+//        Map<String, String> map = queryForState("queryCount", tableName);
+//        if (map == null) {
+//            return null;
+//        }
+//        return map.get("COUNT");
+//    }
+//
+//    @Override
+//    public String queryLatestThreeTxDate(String tableName) {
+//        logger.debug("queryLatestThreeTxDate - tableName: [" + tableName + "]");
+//        Map<String, String> map = queryForState("queryLatestThreeTxDate", tableName);
+//        if (map == null) {
+//            return null;
+//        }
+//        return map.get("LATEST_THREE_TX_DATE");
+//    }
+//
+//    @Override
+//    public String queryCountAndLatestThreeTxDate(String tableName) {
+//        logger.debug("queryCountAndLatestThreeTxDate - tableName: [" + tableName + "]");
+//        Map<String, String> map = queryForState("queryCountAndLatestThreeTxDate", tableName);
+//        if (map == null) {
+//            return null;
+//        }
+//        return map.get("COUNT_AND_LATEST_THREE_TX_DATE");
+//    }
+//
+//
+//    /**
+//     * 状态查询通用接口
+//     * @param sqlId 查询sql语句id
+//     * @param tableName 查询表名
+//     * @return 返回相关map
+//     */
+//    private Map<String, String> queryForState(String sqlId, String tableName) {
+//        Map<String, String> paramMap = new HashMap<>();
+//        paramMap.put(ChainConfig.TABLE_NAME, tableName);
+//        List<Map<String, String>> list = null;
+//        try {
+//            list = sqlMapClient.queryForList("queryCount", paramMap);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//            logger.error(e.getMessage());
+//            return null;
+//        }
+//        if (list == null) {
+//            return null;
+//        }
+//        return list.get(0);
+//    }
 
 
 }

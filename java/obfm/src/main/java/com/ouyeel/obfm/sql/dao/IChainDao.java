@@ -8,6 +8,8 @@ import java.util.Map;
 public interface IChainDao {
 
 
+    public SqlMapClient getSqlMapClient();
+
     /**
      * 根据 tableName 上链数据
      *
@@ -51,5 +53,38 @@ public interface IChainDao {
      * @return
      */
     List<Map<String, String>> queryCallbackByRequestSn(String tableName, String requestSn);
-    SqlMapClient getSqlMapClient();
+
+
+    /**
+     * 状态查询
+     *
+     * @param tableName
+     * @param state
+     * @return
+     */
+    String queryState(String tableName, String state);
+
+//    /**
+//     * 通过智能合约查询交易数
+//     * @param tableName
+//     * @return
+//     */
+//    String queryCount(String tableName);
+//
+//    /**
+//     * 通过智能合约查询最近三次交易时间
+//     * @param tableName
+//     * @return
+//     */
+//    String queryLatestThreeTxDate(String tableName);
+//
+//    /**
+//     * 通过智能合约下载交易数和最近三次交易时间
+//     * @param tableName
+//     * @return
+//     */
+//    String queryCountAndLatestThreeTxDate(String tableName);
+
+
+
 }

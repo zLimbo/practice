@@ -12,17 +12,13 @@ import com.alibaba.fastjson.JSONObject;
 //import com.baosight.obmp.chain.sql.util.BlockChainBasicService;
 //import com.baosight.obmp.chain.sql.util.BusinessExecutors;
 //import com.baosight.obmp.chain.sql.util.CommonUtils;
-import com.ouyeel.obfm.sql.basic.CommonConstant;
 import com.ouyeel.obfm.sql.basic.ExceptionCode;
 import com.ouyeel.obfm.sql.callback.CallbackHandle;
 //import com.ouyeel.obfm.sql.callback.producer.CallbackProducer;
 import com.ouyeel.obfm.sql.config.ChainConfig;
 import com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl;
 import com.ouyeel.obfm.sql.exception.BusinessException;
-import com.ouyeel.obfm.sql.util.ApplicationContextUtil;
-import com.ouyeel.obfm.sql.util.BlockChainBasicService;
-import com.ouyeel.obfm.sql.util.BusinessExecutors;
-import com.ouyeel.obfm.sql.util.CommonUtils;
+import com.ouyeel.obfm.sql.util.*;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -64,13 +60,12 @@ public abstract class ChainManager {
     }
 
     //初始化参数
-    private void init() {
+    public void init() {
         this.blockChainBasicService = (BlockChainBasicService) ApplicationContextUtil.getBean(BlockChainBasicService.class);
         this.commonDao = (ChainDaoImpl) ApplicationContextUtil.getBean(ChainDaoImpl.class);
-//        this.producer = (CallbackProducer) ApplicationContextUtil.getBean(CallbackProducer.class);
-//        this.blockChainBasicService = new BlockChainBasicService();
-
         this.callbackHandle = (CallbackHandle) ApplicationContextUtil.getBean(CallbackHandle.class);
+
+//        this.commonDao = new ChainDaoImpl();
 
         initTableName();
     }
@@ -95,7 +90,7 @@ public abstract class ChainManager {
     private void checkParam(JSONObject inJson) {
         String callbackUrl = inJson.getString(ChainConfig.LOWERCASE_CALLBACK_URL);
         if (StringUtils.isNotBlank(callbackUrl)) {
-            String callbackServiceId = inJson.getString(ChainConfig.CALLBAKC_SERVICEID);
+            String callbackServiceId = inJson.getString(ChainConfig.CALLBACK_SERVICE_ID);
             if (StringUtils.isBlank(callbackServiceId)) {
                 throw new BusinessException(ExceptionCode.CALLBAKC_SERVICE_ID_NOT_FOUND);
             }
@@ -153,7 +148,7 @@ public abstract class ChainManager {
 
     private void callbackSendQueue(JSONObject inJson, Map<String, String> paramMap) {
         StringBuilder sb = new StringBuilder();
-                sb.append(inJson.get(ChainConfig.CALLBAKC_SERVICEID))
+                sb.append(inJson.get(ChainConfig.CALLBACK_SERVICE_ID))
                 .append(",")
                 .append(paramMap.get(ChainConfig.TABLE_NAME))
                 .append(",")
@@ -187,5 +182,44 @@ public abstract class ChainManager {
                 map.put(CommonUtils.smallHumpToUpperUnderline(next), inJson.getString(next));
             }
         }
+    }
+
+    /**
+     * 状态查询
+     * @param inJson
+     * @return
+     */
+    public String queryCount(JSONObject inJson) {
+
+        init();
+        String stateHash = commonDao.queryState(inJson.getString(ChainConfig.TABLE_NAME), ChainConfig.LOWERCASE_COUNT_TX);
+        if (stateHash == null) {
+            return null;
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append(inJson.get(ChainConfig.CALLBACK_URL))
+                .append(",").append(inJson.getString(ChainConfig.TABLE_NAME))
+                .append(",").append(stateHash);
+        try {
+            BusinessExecutors.getThreadPool().submit(() -> {
+                try {
+                    TimeUnit.MILLISECONDS.sleep(Long.parseLong(CALLBACK_SEND_SLEEP));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                callbackHandle.processStateCount(sb.toString());
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("cita sql 线程池阻塞， 状态查询回调哈希：[{}]", stateHash);
+        }
+
+        return stateHash;
+    }
+
+    public void test() {
+        init();
+        System.out.println("commonDao: " + commonDao);
+        commonDao.test();
     }
 }

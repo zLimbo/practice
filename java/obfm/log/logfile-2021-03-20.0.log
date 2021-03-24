@@ -1,0 +1,804 @@
+2021-03-20 14:52:29 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 14:52:29 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 803 ms
+2021-03-20 14:52:29 |ERROR |main |JakartaCommonsLoggingImpl.java:19 |com.ibatis.common.jdbc.SimpleDataSource |SimpleDataSource: Error while loading properties. Cause: java.lang.ClassNotFoundException: spring.datasource.driver-class-name
+java.lang.ClassNotFoundException: spring.datasource.driver-class-name
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at com.ibatis.common.resources.Resources.classForName(Resources.java:265)
+	at com.ibatis.common.resources.Resources.instantiate(Resources.java:281)
+	at com.ibatis.common.jdbc.SimpleDataSource.initialize(SimpleDataSource.java:199)
+	at com.ibatis.common.jdbc.SimpleDataSource.<init>(SimpleDataSource.java:116)
+	at com.ibatis.sqlmap.engine.datasource.SimpleDataSourceFactory.initialize(SimpleDataSourceFactory.java:31)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapConfigParser$9.process(SqlMapConfigParser.java:347)
+	at com.ibatis.common.xml.NodeletParser.processNodelet(NodeletParser.java:121)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:105)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:102)
+	at com.ibatis.common.xml.NodeletParser.process(NodeletParser.java:102)
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:72)
+	at com.ibatis.common.xml.NodeletParser.parse(NodeletParser.java:51)
+	at com.ibatis.sqlmap.engine.builder.xml.SqlMapConfigParser.parse(SqlMapConfigParser.java:86)
+	at com.ibatis.sqlmap.client.SqlMapClientBuilder.buildSqlMapClient(SqlMapClientBuilder.java:63)
+	at com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl.<clinit>(ChainDaoImpl.java:35)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1279)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.ouyeel.obfm.ObfmApplication.main(ObfmApplication.java:10)
+2021-03-20 14:52:29 |ERROR |main |ChainDaoImpl.java:40 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |Error occurred.  Cause: com.ibatis.common.xml.NodeletException: Error parsing XML.  Cause: java.lang.RuntimeException: Error parsing XPath '/sqlMapConfig/transactionManager/dataSource/end()'.  Cause: com.ibatis.sqlmap.client.SqlMapException: Error initializing DataSource.  Could not instantiate DataSourceFactory.  Cause: java.lang.RuntimeException: SimpleDataSource: Error while loading properties. Cause: java.lang.ClassNotFoundException: spring.datasource.driver-class-name
+2021-03-20 14:52:29 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 14:52:30 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 14:57:50 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 14:57:50 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 802 ms
+2021-03-20 14:57:50 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 14:57:50 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 14:59:59 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 14:59:59 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 765 ms
+2021-03-20 14:59:59 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 14:59:59 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 15:00:16 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 15:00:16 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 3 ms
+2021-03-20 15:35:25 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 15:35:25 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 896 ms
+2021-03-20 15:35:26 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 15:35:26 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 15:35:43 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 15:35:43 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 4 ms
+2021-03-20 15:35:43 |ERROR |http-nio-8080-exec-1 |DirectJDKLog.java:175 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] |Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ouyeel.obfm.sql.callback.CallbackHandle' available] with root cause
+org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ouyeel.obfm.sql.callback.CallbackHandle' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:343)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:335)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1123)
+	at com.ouyeel.obfm.sql.util.ApplicationContextUtil.getBean(ApplicationContextUtil.java:20)
+	at com.ouyeel.obfm.sql.ChainManager.init(ChainManager.java:73)
+	at com.ouyeel.obfm.sql.ChainManager.executor(ChainManager.java:80)
+	at com.ouyeel.obfm.controller.InvoiceController.upChain(InvoiceController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-20 15:38:26 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 15:38:26 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 808 ms
+2021-03-20 15:38:26 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 15:38:26 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 15:38:30 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 15:38:30 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 4 ms
+2021-03-20 15:38:30 |ERROR |http-nio-8080-exec-1 |DirectJDKLog.java:175 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] |Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.ouyeel.obfm.sql.exception.BusinessException: BusinessErrorCode{code=5004, msg='上链结果通知回调serviceId为空！'}] with root cause
+com.ouyeel.obfm.sql.exception.BusinessException: BusinessErrorCode{code=5004, msg='上链结果通知回调serviceId为空！'}
+	at com.ouyeel.obfm.sql.ChainManager.checkParam(ChainManager.java:100)
+	at com.ouyeel.obfm.sql.ChainManager.executor(ChainManager.java:82)
+	at com.ouyeel.obfm.controller.InvoiceController.upChain(InvoiceController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-20 15:49:51 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 15:49:51 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 807 ms
+2021-03-20 15:49:51 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 15:49:52 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 15:50:59 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 15:50:59 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 795 ms
+2021-03-20 15:51:00 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 15:51:00 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 15:51:06 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 15:51:06 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 3 ms
+2021-03-20 15:51:06 |ERROR |http-nio-8080-exec-1 |DirectJDKLog.java:175 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] |Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: For input string: "2019-03-05 11:11:11.12"] with root cause
+java.lang.NumberFormatException: For input string: "2019-03-05 11:11:11.12"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at com.ouyeel.obfm.sql.util.CommonUtils.longToDateString(CommonUtils.java:125)
+	at com.ouyeel.obfm.sql.ChainManager.store(ChainManager.java:117)
+	at com.ouyeel.obfm.sql.ChainManager.executor(ChainManager.java:86)
+	at com.ouyeel.obfm.controller.InvoiceController.upChain(InvoiceController.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-20 15:54:39 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 15:54:39 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 821 ms
+2021-03-20 15:54:39 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 15:54:40 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 15:55:25 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 15:55:25 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 4 ms
+2021-03-20 15:55:25 |ERROR |http-nio-8080-exec-1 |DirectJDKLog.java:175 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] |Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: null] with root cause
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.valueOf(Long.java:803)
+	at com.ouyeel.obfm.sql.util.CommonUtils.longToDateString(CommonUtils.java:125)
+	at com.ouyeel.obfm.sql.ChainManager.store(ChainManager.java:117)
+	at com.ouyeel.obfm.sql.ChainManager.executor(ChainManager.java:86)
+	at com.ouyeel.obfm.controller.InvoiceController.upChain(InvoiceController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-20 15:58:11 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 15:58:11 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 819 ms
+2021-03-20 15:58:11 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 15:58:11 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 15:58:14 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 15:58:14 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 4 ms
+2021-03-20 15:58:14 |ERROR |http-nio-8080-exec-1 |DirectJDKLog.java:175 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] |Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: null] with root cause
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:552)
+	at java.lang.Long.valueOf(Long.java:803)
+	at com.ouyeel.obfm.sql.util.CommonUtils.longToDateString(CommonUtils.java:125)
+	at com.ouyeel.obfm.sql.ChainManager.store(ChainManager.java:117)
+	at com.ouyeel.obfm.sql.ChainManager.executor(ChainManager.java:86)
+	at com.ouyeel.obfm.controller.InvoiceController.upChain(InvoiceController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-20 16:01:34 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 16:01:34 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 826 ms
+2021-03-20 16:01:34 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 16:01:34 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 16:01:37 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 16:01:37 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 4 ms
+2021-03-20 16:01:37 |ERROR |http-nio-8080-exec-1 |ChainDaoImpl.java:58 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |insertTx fail  [  
+--- The error occurred in mapper/ChainMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTx-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'TX_HASH' cannot be null]
+2021-03-20 16:01:37 |ERROR |http-nio-8080-exec-1 |ChainManager.java:123 |com.ouyeel.obfm.sql.ChainManager |insertTx error
+2021-03-20 16:01:37 |ERROR |http-nio-8080-exec-1 |DirectJDKLog.java:175 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] |Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.ouyeel.obfm.sql.exception.BusinessException: BusinessErrorCode{code=5001, msg='上传交易失败！'}] with root cause
+com.ouyeel.obfm.sql.exception.BusinessException: BusinessErrorCode{code=5001, msg='上传交易失败！'}
+	at com.ouyeel.obfm.sql.ChainManager.store(ChainManager.java:124)
+	at com.ouyeel.obfm.sql.ChainManager.executor(ChainManager.java:86)
+	at com.ouyeel.obfm.controller.InvoiceController.upChain(InvoiceController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-20 16:03:29 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 16:03:29 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 850 ms
+2021-03-20 16:03:30 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 16:03:30 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 16:03:32 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 16:03:32 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 4 ms
+2021-03-20 16:03:32 |ERROR |http-nio-8080-exec-1 |ChainDaoImpl.java:58 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |insertTx fail  [  
+--- The error occurred in mapper/ChainMapper.xml.  
+--- The error occurred while applying a parameter map.  
+--- Check the insertTx-InlineParameterMap.  
+--- Check the statement (update failed).  
+--- Cause: java.sql.SQLException: Column count doesn't match value count at row 1]
+2021-03-20 16:03:32 |ERROR |http-nio-8080-exec-1 |ChainManager.java:123 |com.ouyeel.obfm.sql.ChainManager |insertTx error
+2021-03-20 16:03:32 |ERROR |http-nio-8080-exec-1 |DirectJDKLog.java:175 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] |Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.ouyeel.obfm.sql.exception.BusinessException: BusinessErrorCode{code=5001, msg='上传交易失败！'}] with root cause
+com.ouyeel.obfm.sql.exception.BusinessException: BusinessErrorCode{code=5001, msg='上传交易失败！'}
+	at com.ouyeel.obfm.sql.ChainManager.store(ChainManager.java:124)
+	at com.ouyeel.obfm.sql.ChainManager.executor(ChainManager.java:86)
+	at com.ouyeel.obfm.controller.InvoiceController.upChain(InvoiceController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-03-20 16:04:15 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 16:04:15 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 836 ms
+2021-03-20 16:04:15 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 16:04:15 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 16:04:17 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 16:04:17 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 4 ms
+2021-03-20 16:10:07 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 16:10:07 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 814 ms
+2021-03-20 16:10:07 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 16:10:07 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 16:10:27 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 16:10:27 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 3 ms
+2021-03-20 16:11:24 |INFO  |main |StartupInfoLogger.java:50 |com.ouyeel.obfm.ObfmApplication |Starting ObfmApplication on L with PID 12008 (C:\z\practice\java\obfm\target\classes started by z in C:\z\practice\java\obfm)
+2021-03-20 16:11:24 |DEBUG |main |StartupInfoLogger.java:53 |com.ouyeel.obfm.ObfmApplication |Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2021-03-20 16:11:24 |INFO  |main |SpringApplication.java:675 |com.ouyeel.obfm.ObfmApplication |No active profile set, falling back to default profiles: default
+2021-03-20 16:11:24 |DEBUG |background-preinit |ResourceBundleMessageInterpolator.java:89 |org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator |Loaded expression factory via original TCCL
+2021-03-20 16:11:24 |DEBUG |background-preinit |ValidatorFactoryImpl.java:578 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2021-03-20 16:11:24 |DEBUG |background-preinit |ValidatorFactoryImpl.java:579 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2021-03-20 16:11:24 |DEBUG |background-preinit |ValidatorFactoryImpl.java:580 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2021-03-20 16:11:24 |DEBUG |background-preinit |ValidatorFactoryImpl.java:581 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2021-03-20 16:11:24 |DEBUG |background-preinit |ValidatorFactoryImpl.java:582 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2021-03-20 16:11:24 |INFO  |main |TomcatWebServer.java:90 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat initialized with port(s): 8080 (http)
+2021-03-20 16:11:24 |INFO  |main |DirectJDKLog.java:173 |org.apache.coyote.http11.Http11NioProtocol |Initializing ProtocolHandler ["http-nio-8080"]
+2021-03-20 16:11:24 |INFO  |main |DirectJDKLog.java:173 |org.apache.catalina.core.StandardService |Starting service [Tomcat]
+2021-03-20 16:11:24 |INFO  |main |DirectJDKLog.java:173 |org.apache.catalina.core.StandardEngine |Starting Servlet engine: [Apache Tomcat/9.0.16]
+2021-03-20 16:11:24 |INFO  |main |DirectJDKLog.java:173 |org.apache.catalina.core.AprLifecycleListener |The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\z\bin\Java\jdk1.8.0_261\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Users\z\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\z\AppData\Local\Programs\Python\Python39\;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.1\libnvvp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\dotnet\;C:\Program Files\NVIDIA Corporation\Nsight Compute 2020.2.1\;C:\Program Files\Geth;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\z\.cargo\bin;C:\Users\z\AppData\Local\Microsoft\WindowsApps;C:\z\bin\Java\jdk1.8.0_261\bin;C:\Users\z\AppData\Local\JetBrains\IntelliJ IDEA 2020.2.3\bin;;C:\Program Files\Bandizip\;C:\z\bin\mysql-5.7.31-winx64\bin;C:\Users\z\AppData\Local\hyper\app-3.0.2\resources\bin;C:\z\bin\apache-maven-3.6.3\bin;C:\users\z\appdata\local\programs\python\python37\Scripts;C:\z\bin\cuda\bin;C:\z\bin\apache-jmeter-5.4\bin;C:\MinGW\bin;C:\Program Files\CodeBlocks\MinGW\bin;C:\Users\z\AppData\Roaming\npm;C:\Users\z\AppData\Local\Pandoc\;C:\Program Files\Go\bin;;C:\Program Files\JetBrains\GoLand 2020.3.4\bin;;.]
+2021-03-20 16:11:25 |INFO  |main |DirectJDKLog.java:173 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] |Initializing Spring embedded WebApplicationContext
+2021-03-20 16:11:25 |INFO  |main |ServletWebServerApplicationContext.java:296 |org.springframework.web.context.ContextLoader |Root WebApplicationContext: initialization completed in 798 ms
+2021-03-20 16:11:25 |DEBUG |main |ChainDaoImpl.java:32 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |ibatis SqlMapConfig ...
+2021-03-20 16:11:25 |DEBUG |main |ChainDaoImpl.java:37 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |ibatis SqlMapConfig success
+2021-03-20 16:11:25 |DEBUG |main |TraversableResolvers.java:60 |org.hibernate.validator.internal.engine.resolver.TraversableResolvers |Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2021-03-20 16:11:25 |DEBUG |main |ResourceBundleMessageInterpolator.java:89 |org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator |Loaded expression factory via original TCCL
+2021-03-20 16:11:25 |DEBUG |main |TraversableResolvers.java:60 |org.hibernate.validator.internal.engine.resolver.TraversableResolvers |Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2021-03-20 16:11:25 |DEBUG |main |ConfigurationImpl.java:148 |org.hibernate.validator.internal.engine.ConfigurationImpl |Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2021-03-20 16:11:25 |DEBUG |main |ConfigurationImpl.java:180 |org.hibernate.validator.internal.engine.ConfigurationImpl |Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2021-03-20 16:11:25 |DEBUG |main |ConfigurationImpl.java:194 |org.hibernate.validator.internal.engine.ConfigurationImpl |Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2021-03-20 16:11:25 |DEBUG |main |ValidationXmlParser.java:120 |org.hibernate.validator.internal.xml.config.ValidationXmlParser |Trying to load META-INF/validation.xml for XML based Validator configuration.
+2021-03-20 16:11:25 |DEBUG |main |ResourceLoaderHelper.java:53 |org.hibernate.validator.internal.xml.config.ResourceLoaderHelper |Trying to load META-INF/validation.xml via user class loader
+2021-03-20 16:11:25 |DEBUG |main |ResourceLoaderHelper.java:60 |org.hibernate.validator.internal.xml.config.ResourceLoaderHelper |Trying to load META-INF/validation.xml via TCCL
+2021-03-20 16:11:25 |DEBUG |main |ResourceLoaderHelper.java:66 |org.hibernate.validator.internal.xml.config.ResourceLoaderHelper |Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2021-03-20 16:11:25 |DEBUG |main |ValidationXmlParser.java:127 |org.hibernate.validator.internal.xml.config.ValidationXmlParser |No META-INF/validation.xml found. Using annotation based configuration only.
+2021-03-20 16:11:25 |DEBUG |main |ValidatorFactoryImpl.java:578 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2021-03-20 16:11:25 |DEBUG |main |ValidatorFactoryImpl.java:579 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2021-03-20 16:11:25 |DEBUG |main |ValidatorFactoryImpl.java:580 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2021-03-20 16:11:25 |DEBUG |main |ValidatorFactoryImpl.java:581 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2021-03-20 16:11:25 |DEBUG |main |ValidatorFactoryImpl.java:582 |org.hibernate.validator.internal.engine.ValidatorFactoryImpl |HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2021-03-20 16:11:25 |INFO  |main |ExecutorConfigurationSupport.java:171 |org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor |Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-20 16:11:25 |INFO  |main |DirectJDKLog.java:173 |org.apache.coyote.http11.Http11NioProtocol |Starting ProtocolHandler ["http-nio-8080"]
+2021-03-20 16:11:25 |INFO  |main |TomcatWebServer.java:204 |org.springframework.boot.web.embedded.tomcat.TomcatWebServer |Tomcat started on port(s): 8080 (http) with context path ''
+2021-03-20 16:11:25 |INFO  |main |StartupInfoLogger.java:59 |com.ouyeel.obfm.ObfmApplication |Started ObfmApplication in 1.51 seconds (JVM running for 2.773)
+2021-03-20 16:11:30 |INFO  |http-nio-8080-exec-1 |DirectJDKLog.java:173 |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] |Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-20 16:11:30 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:524 |org.springframework.web.servlet.DispatcherServlet |Initializing Servlet 'dispatcherServlet'
+2021-03-20 16:11:30 |INFO  |http-nio-8080-exec-1 |FrameworkServlet.java:546 |org.springframework.web.servlet.DispatcherServlet |Completed initialization in 4 ms
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |InvoiceController.java:36 |com.ouyeel.obfm.controller.InvoiceController |inJson: 
+{
+	"accountId":"002",
+	"systemId":"00007817",
+	"dataInfo":{
+		"timestamps":"1601712721",
+		"taxesPoint":"17%",
+		"sellerName":"华东师大",
+		"taxes":"150",
+		"invoiceDate":"2020-10-03",
+		"consumerTaxesNo":"12100000425006133D",
+		"sellerTaxesNo":"913100003245878130",
+		"price":"1000",
+		"statementSheet":"1",
+		"pricePlusTaxes":"1000",
+		"invoiceNumber":"1",
+		"invoiceType":"增值税",
+		"statementWeight":"1kg",
+		"invoiceNo":"3100982170",
+		"consumerName":"数据学院"
+	},
+	"requestSn":"f2e4bcac-6f28-47ea-b48d-7eb3e10d5e52",
+	"businessId":"businessId",
+	"keyId":"00003991643",
+	"callbackServiceId":"http://127.0.0.1:8080/callback",
+	"callbackUrl":"http://127.0.0.1:8080/callback",
+	"tableName":"invoice"
+}
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |ChainDaoImpl.java:112 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryAllByRequestSn start
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |ChainDaoImpl.java:117 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryAllByRequestSn...
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |ChainDaoImpl.java:126 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryAllByRequestSn end
+2021-03-20 16:11:30 |INFO  |http-nio-8080-exec-1 |ChainManager.java:107 |com.ouyeel.obfm.sql.ChainManager |inJson: [{"accountId":"002","systemId":"00007817","dataInfo":{"timestamps":"1601712721","taxesPoint":"17%","sellerName":"华东师大","taxes":"150","invoiceDate":"2020-10-03","consumerTaxesNo":"12100000425006133D","sellerTaxesNo":"913100003245878130","price":"1000","statementSheet":"1","pricePlusTaxes":"1000","invoiceNumber":"1","invoiceType":"增值税","statementWeight":"1kg","invoiceNo":"3100982170","consumerName":"数据学院"},"requestSn":"e3301d58-fe2f-4042-a3ce-3b4af74fb5db","invokeTime":"1616227890183","businessId":"businessId","keyId":"00003991643","callbackServiceId":"http://127.0.0.1:8080/callback","callbackUrl":"http://127.0.0.1:8080/callback","tableName":"invoice"}]
+2021-03-20 16:11:30 |INFO  |http-nio-8080-exec-1 |ChainManager.java:118 |com.ouyeel.obfm.sql.ChainManager |上链参数：[{"BUSINESS_ID":"businessId","TABLE_NAME":"invoice","ACCOUNT_ID":"002","CALLBACK_URL":"http://127.0.0.1:8080/callback","PRIVATE_KEY":"d6c83aee4bfbeb135a2dcef8c803b186d0678a99002b09d3c60c22aca7105005","PUBLIC_KEY":"2204404536ab867d9a964bfcc5e6fdaa7d77e509ce5891d38b3ebbb036e5c225994597ea6d0bdff3539fd3062b3943a1c7dd75d173f35101b71298e9f7f08d51","SM4_KEY":"0123456789abcdef0123456789abcdef","SM4_IV":"0123456789abcdef0123456789abcdef","KEY_ID":"00003991643","REQUEST_SN":"e3301d58-fe2f-4042-a3ce-3b4af74fb5db","SYSTEM_ID":"00007817","DATA_INFO":"{\"CONSUMER_TAXES_NO\":\"12100000425006133D\",\"PRICE\":\"1000\",\"PRICE_PLUS_TAXES\":\"1000\",\"TAXES\":\"150\",\"INVOICE_NUMBER\":\"1\",\"INVOICE_NO\":\"3100982170\",\"INVOICE_DATE\":\"2020-10-03\",\"STATEMENT_SHEET\":\"1\",\"SELLER_TAXES_NO\":\"913100003245878130\",\"INVOICE_TYPE\":\"增值税\",\"STATEMENT_WEIGHT\":\"1kg\",\"TIMESTAMPS\":\"1601712721\",\"CONSUMER_NAME\":\"数据学院\",\"SELLER_NAME\":\"华东师大\",\"TAXES_POINT\":\"17%\"}","INVOKE_TIME":"2021-03-20 16:11:30"}]
+2021-03-20 16:11:30 |INFO  |http-nio-8080-exec-1 |ChainDaoImpl.java:53 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |insertTx start paramMap: [{BUSINESS_ID=businessId, TABLE_NAME=invoice, ACCOUNT_ID=002, CALLBACK_URL=http://127.0.0.1:8080/callback, PRIVATE_KEY=d6c83aee4bfbeb135a2dcef8c803b186d0678a99002b09d3c60c22aca7105005, PUBLIC_KEY=2204404536ab867d9a964bfcc5e6fdaa7d77e509ce5891d38b3ebbb036e5c225994597ea6d0bdff3539fd3062b3943a1c7dd75d173f35101b71298e9f7f08d51, SM4_KEY=0123456789abcdef0123456789abcdef, SM4_IV=0123456789abcdef0123456789abcdef, KEY_ID=00003991643, REQUEST_SN=e3301d58-fe2f-4042-a3ce-3b4af74fb5db, SYSTEM_ID=00007817, DATA_INFO={"CONSUMER_TAXES_NO":"12100000425006133D","PRICE":"1000","PRICE_PLUS_TAXES":"1000","TAXES":"150","INVOICE_NUMBER":"1","INVOICE_NO":"3100982170","INVOICE_DATE":"2020-10-03","STATEMENT_SHEET":"1","SELLER_TAXES_NO":"913100003245878130","INVOICE_TYPE":"增值税","STATEMENT_WEIGHT":"1kg","TIMESTAMPS":"1601712721","CONSUMER_NAME":"数据学院","SELLER_NAME":"华东师大","TAXES_POINT":"17%"}, INVOKE_TIME=2021-03-20 16:11:30}]
+2021-03-20 16:11:30 |INFO  |http-nio-8080-exec-1 |ChainDaoImpl.java:56 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |insertResult: [null]
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |ChainDaoImpl.java:68 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryTxHashByRequestSn start
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |ChainDaoImpl.java:73 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryTxHashByRequestSn...
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |ChainDaoImpl.java:79 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |txHash: [e3301d58-fe2f-4042-a3ce-3b4af74fb5db]
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |ChainDaoImpl.java:83 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryByRequestSn success
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |ChainDaoImpl.java:84 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryTxHashByRequestSn end
+2021-03-20 16:11:30 |INFO  |http-nio-8080-exec-1 |ChainManager.java:135 |com.ouyeel.obfm.sql.ChainManager |insertTx query txHash : [e3301d58-fe2f-4042-a3ce-3b4af74fb5db]
+2021-03-20 16:11:30 |DEBUG |http-nio-8080-exec-1 |InvoiceController.java:42 |com.ouyeel.obfm.controller.InvoiceController |[upChain] end
+2021-03-20 16:11:33 |INFO  |cita-sql-pool-0 |BlockChainCallBackService.java:56 |com.ouyeel.obfm.sql.util.BlockChainCallBackService |上链结果通知参数：callbackServiceId : [http://127.0.0.1:8080/callback],tableName:[invoice],requestSn:[e3301d58-fe2f-4042-a3ce-3b4af74fb5db]
+2021-03-20 16:11:33 |INFO  |cita-sql-pool-0 |ChainDaoImpl.java:133 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryCallbackByRequestSn start
+2021-03-20 16:11:33 |INFO  |cita-sql-pool-0 |ChainDaoImpl.java:134 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryCallbackByRequestSn tableName:[invoice],requestSn:[e3301d58-fe2f-4042-a3ce-3b4af74fb5db]
+2021-03-20 16:11:33 |DEBUG |cita-sql-pool-0 |ChainDaoImpl.java:139 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryByTxHash...
+2021-03-20 16:11:33 |INFO  |cita-sql-pool-0 |ChainDaoImpl.java:141 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryCallbackByRequestSn param : [{TABLE_NAME=invoice, REQUEST_SN=e3301d58-fe2f-4042-a3ce-3b4af74fb5db}]
+2021-03-20 16:11:33 |INFO  |cita-sql-pool-0 |ChainDaoImpl.java:143 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryByTxHash result:[[{ON_CHAIN=1, BLOCK_HEIGHT=0x54ef, BLOCK_TIME=120304005403, TX_HASH=e3301d58-fe2f-4042-a3ce-3b4af74fb5db}]]
+2021-03-20 16:11:33 |INFO  |cita-sql-pool-0 |ChainDaoImpl.java:150 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryByTxHash success
+2021-03-20 16:11:33 |DEBUG |cita-sql-pool-0 |ChainDaoImpl.java:151 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryCallbackByRequestSn end
+2021-03-20 16:11:33 |INFO  |cita-sql-pool-0 |BlockChainCallBackService.java:63 |com.ouyeel.obfm.sql.util.BlockChainCallBackService |上链结果查询第[1]次，结果：[[{ON_CHAIN=1, BLOCK_HEIGHT=0x54ef, BLOCK_TIME=120304005403, TX_HASH=e3301d58-fe2f-4042-a3ce-3b4af74fb5db}]]
+2021-03-20 16:11:33 |DEBUG |cita-sql-pool-0 |HttpUtil.java:31 |com.ouyeel.obfm.sql.util.HttpUtil |[send] start
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |HttpUtil.java:40 |com.ouyeel.obfm.sql.util.HttpUtil |request url: http://127.0.0.1:8080/callback
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |RequestAddCookies.java:123 |org.apache.http.client.protocol.RequestAddCookies |CookieSpec selected: default
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |RequestAuthCache.java:77 |org.apache.http.client.protocol.RequestAuthCache |Auth cache not set in the context
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |PoolingHttpClientConnectionManager.java:267 |org.apache.http.impl.conn.PoolingHttpClientConnectionManager |Connection request: [route: {}->http://127.0.0.1:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |PoolingHttpClientConnectionManager.java:312 |org.apache.http.impl.conn.PoolingHttpClientConnectionManager |Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |MainClientExec.java:234 |org.apache.http.impl.execchain.MainClientExec |Opening connection {}->http://127.0.0.1:8080
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |DefaultHttpClientConnectionOperator.java:139 |org.apache.http.impl.conn.DefaultHttpClientConnectionOperator |Connecting to /127.0.0.1:8080
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |DefaultHttpClientConnectionOperator.java:146 |org.apache.http.impl.conn.DefaultHttpClientConnectionOperator |Connection established 127.0.0.1:3452<->127.0.0.1:8080
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |MainClientExec.java:255 |org.apache.http.impl.execchain.MainClientExec |Executing request POST /callback HTTP/1.1
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |MainClientExec.java:260 |org.apache.http.impl.execchain.MainClientExec |Target auth state: UNCHALLENGED
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |MainClientExec.java:266 |org.apache.http.impl.execchain.MainClientExec |Proxy auth state: UNCHALLENGED
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:133 |org.apache.http.headers |http-outgoing-0 >> POST /callback HTTP/1.1
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-0 >> Content-type: application/json
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-0 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-0 >> Content-Length: 96
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-0 >> Content-Type: application/json
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-0 >> Host: 127.0.0.1:8080
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-0 >> Connection: Keep-Alive
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-0 >> Accept-Encoding: gzip,deflate
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "POST /callback HTTP/1.1[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "Content-type: application/json[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "Content-Length: 96[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "Host: 127.0.0.1:8080[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 >> "[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:87 |org.apache.http.wire |http-outgoing-0 >> "{"txTime":"120304005403","blockNumber":"0x54ef","txHash":"e3301d58-fe2f-4042-a3ce-3b4af74fb5db"}"
+2021-03-20 16:11:34 |DEBUG |http-nio-8080-exec-2 |InvoiceController.java:52 |com.ouyeel.obfm.controller.InvoiceController |============> [callback] start
+2021-03-20 16:11:34 |DEBUG |http-nio-8080-exec-2 |InvoiceController.java:53 |com.ouyeel.obfm.controller.InvoiceController |callback data: {"txTime":"120304005403","blockNumber":"0x54ef","txHash":"e3301d58-fe2f-4042-a3ce-3b4af74fb5db"}
+2021-03-20 16:11:34 |DEBUG |http-nio-8080-exec-2 |InvoiceController.java:62 |com.ouyeel.obfm.controller.InvoiceController |============> [callback] end
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 << "Content-Length: 43[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 << "Date: Sat, 20 Mar 2021 08:11:34 GMT[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:73 |org.apache.http.wire |http-outgoing-0 << "[\r][\n]"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |Wire.java:87 |org.apache.http.wire |http-outgoing-0 << "{"msg":"[0xe5][0x9b][0x9e][0xe8][0xb0][0x83][0xe6][0x8e][0xa5][0xe6][0x94][0xb6][0xe6][0x88][0x90][0xe5][0x8a][0x9f]","success":true}"
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:122 |org.apache.http.headers |http-outgoing-0 << HTTP/1.1 200 
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:125 |org.apache.http.headers |http-outgoing-0 << Content-Type: text/plain;charset=UTF-8
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:125 |org.apache.http.headers |http-outgoing-0 << Content-Length: 43
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:125 |org.apache.http.headers |http-outgoing-0 << Date: Sat, 20 Mar 2021 08:11:34 GMT
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |MainClientExec.java:285 |org.apache.http.impl.execchain.MainClientExec |Connection can be kept alive indefinitely
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |PoolingHttpClientConnectionManager.java:344 |org.apache.http.impl.conn.PoolingHttpClientConnectionManager |Connection [id: 0][route: {}->http://127.0.0.1:8080] can be kept alive indefinitely
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |LoggingManagedHttpClientConnection.java:88 |org.apache.http.impl.conn.DefaultManagedHttpClientConnection |http-outgoing-0: set socket timeout to 0
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |PoolingHttpClientConnectionManager.java:351 |org.apache.http.impl.conn.PoolingHttpClientConnectionManager |Connection released: [id: 0][route: {}->http://127.0.0.1:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |HttpUtil.java:56 |com.ouyeel.obfm.sql.util.HttpUtil |body: [{"msg":"回调接收成功","success":true}]
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |HttpUtil.java:57 |com.ouyeel.obfm.sql.util.HttpUtil |[send] end
+2021-03-20 16:11:34 |DEBUG |cita-sql-pool-0 |BlockChainCallBackService.java:114 |com.ouyeel.obfm.sql.util.BlockChainCallBackService |callback success ...
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |InvoiceController.java:36 |com.ouyeel.obfm.controller.InvoiceController |inJson: 
+{
+	"accountId":"002",
+	"systemId":"00007817",
+	"dataInfo":{
+		"timestamps":"1601712721",
+		"taxesPoint":"17%",
+		"sellerName":"华东师大",
+		"taxes":"150",
+		"invoiceDate":"2020-10-03",
+		"consumerTaxesNo":"12100000425006133D",
+		"sellerTaxesNo":"913100003245878130",
+		"price":"1000",
+		"statementSheet":"1",
+		"pricePlusTaxes":"1000",
+		"invoiceNumber":"1",
+		"invoiceType":"增值税",
+		"statementWeight":"1kg",
+		"invoiceNo":"3100982170",
+		"consumerName":"数据学院"
+	},
+	"requestSn":"f2e4bcac-6f28-47ea-b48d-7eb3e10d5e52",
+	"businessId":"businessId",
+	"keyId":"00003991643",
+	"callbackServiceId":"http://127.0.0.1:8080/callback",
+	"callbackUrl":"http://127.0.0.1:8080/callback",
+	"tableName":"invoice"
+}
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |ChainDaoImpl.java:112 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryAllByRequestSn start
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |ChainDaoImpl.java:117 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryAllByRequestSn...
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |ChainDaoImpl.java:126 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryAllByRequestSn end
+2021-03-20 16:13:35 |INFO  |http-nio-8080-exec-5 |ChainManager.java:107 |com.ouyeel.obfm.sql.ChainManager |inJson: [{"accountId":"002","systemId":"00007817","dataInfo":{"timestamps":"1601712721","taxesPoint":"17%","sellerName":"华东师大","taxes":"150","invoiceDate":"2020-10-03","consumerTaxesNo":"12100000425006133D","sellerTaxesNo":"913100003245878130","price":"1000","statementSheet":"1","pricePlusTaxes":"1000","invoiceNumber":"1","invoiceType":"增值税","statementWeight":"1kg","invoiceNo":"3100982170","consumerName":"数据学院"},"requestSn":"ea2d02eb-952c-498c-af3e-06935907ad08","invokeTime":"1616228015695","businessId":"businessId","keyId":"00003991643","callbackServiceId":"http://127.0.0.1:8080/callback","callbackUrl":"http://127.0.0.1:8080/callback","tableName":"invoice"}]
+2021-03-20 16:13:35 |INFO  |http-nio-8080-exec-5 |ChainManager.java:118 |com.ouyeel.obfm.sql.ChainManager |上链参数：[{"BUSINESS_ID":"businessId","TABLE_NAME":"invoice","ACCOUNT_ID":"002","CALLBACK_URL":"http://127.0.0.1:8080/callback","PRIVATE_KEY":"d6c83aee4bfbeb135a2dcef8c803b186d0678a99002b09d3c60c22aca7105005","PUBLIC_KEY":"2204404536ab867d9a964bfcc5e6fdaa7d77e509ce5891d38b3ebbb036e5c225994597ea6d0bdff3539fd3062b3943a1c7dd75d173f35101b71298e9f7f08d51","SM4_KEY":"0123456789abcdef0123456789abcdef","SM4_IV":"0123456789abcdef0123456789abcdef","KEY_ID":"00003991643","REQUEST_SN":"ea2d02eb-952c-498c-af3e-06935907ad08","SYSTEM_ID":"00007817","DATA_INFO":"{\"CONSUMER_TAXES_NO\":\"12100000425006133D\",\"PRICE\":\"1000\",\"PRICE_PLUS_TAXES\":\"1000\",\"TAXES\":\"150\",\"INVOICE_NUMBER\":\"1\",\"INVOICE_NO\":\"3100982170\",\"INVOICE_DATE\":\"2020-10-03\",\"STATEMENT_SHEET\":\"1\",\"SELLER_TAXES_NO\":\"913100003245878130\",\"INVOICE_TYPE\":\"增值税\",\"STATEMENT_WEIGHT\":\"1kg\",\"TIMESTAMPS\":\"1601712721\",\"CONSUMER_NAME\":\"数据学院\",\"SELLER_NAME\":\"华东师大\",\"TAXES_POINT\":\"17%\"}","INVOKE_TIME":"2021-03-20 16:13:35"}]
+2021-03-20 16:13:35 |INFO  |http-nio-8080-exec-5 |ChainDaoImpl.java:53 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |insertTx start paramMap: [{BUSINESS_ID=businessId, TABLE_NAME=invoice, ACCOUNT_ID=002, CALLBACK_URL=http://127.0.0.1:8080/callback, PRIVATE_KEY=d6c83aee4bfbeb135a2dcef8c803b186d0678a99002b09d3c60c22aca7105005, PUBLIC_KEY=2204404536ab867d9a964bfcc5e6fdaa7d77e509ce5891d38b3ebbb036e5c225994597ea6d0bdff3539fd3062b3943a1c7dd75d173f35101b71298e9f7f08d51, SM4_KEY=0123456789abcdef0123456789abcdef, SM4_IV=0123456789abcdef0123456789abcdef, KEY_ID=00003991643, REQUEST_SN=ea2d02eb-952c-498c-af3e-06935907ad08, SYSTEM_ID=00007817, DATA_INFO={"CONSUMER_TAXES_NO":"12100000425006133D","PRICE":"1000","PRICE_PLUS_TAXES":"1000","TAXES":"150","INVOICE_NUMBER":"1","INVOICE_NO":"3100982170","INVOICE_DATE":"2020-10-03","STATEMENT_SHEET":"1","SELLER_TAXES_NO":"913100003245878130","INVOICE_TYPE":"增值税","STATEMENT_WEIGHT":"1kg","TIMESTAMPS":"1601712721","CONSUMER_NAME":"数据学院","SELLER_NAME":"华东师大","TAXES_POINT":"17%"}, INVOKE_TIME=2021-03-20 16:13:35}]
+2021-03-20 16:13:35 |INFO  |http-nio-8080-exec-5 |ChainDaoImpl.java:56 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |insertResult: [null]
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |ChainDaoImpl.java:68 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryTxHashByRequestSn start
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |ChainDaoImpl.java:73 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryTxHashByRequestSn...
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |ChainDaoImpl.java:79 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |txHash: [ea2d02eb-952c-498c-af3e-06935907ad08]
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |ChainDaoImpl.java:83 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryByRequestSn success
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |ChainDaoImpl.java:84 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryTxHashByRequestSn end
+2021-03-20 16:13:35 |INFO  |http-nio-8080-exec-5 |ChainManager.java:135 |com.ouyeel.obfm.sql.ChainManager |insertTx query txHash : [ea2d02eb-952c-498c-af3e-06935907ad08]
+2021-03-20 16:13:35 |DEBUG |http-nio-8080-exec-5 |InvoiceController.java:42 |com.ouyeel.obfm.controller.InvoiceController |[upChain] end
+2021-03-20 16:13:38 |INFO  |cita-sql-pool-1 |BlockChainCallBackService.java:56 |com.ouyeel.obfm.sql.util.BlockChainCallBackService |上链结果通知参数：callbackServiceId : [http://127.0.0.1:8080/callback],tableName:[invoice],requestSn:[ea2d02eb-952c-498c-af3e-06935907ad08]
+2021-03-20 16:13:38 |INFO  |cita-sql-pool-1 |ChainDaoImpl.java:133 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryCallbackByRequestSn start
+2021-03-20 16:13:38 |INFO  |cita-sql-pool-1 |ChainDaoImpl.java:134 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryCallbackByRequestSn tableName:[invoice],requestSn:[ea2d02eb-952c-498c-af3e-06935907ad08]
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |ChainDaoImpl.java:139 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryByTxHash...
+2021-03-20 16:13:38 |INFO  |cita-sql-pool-1 |ChainDaoImpl.java:141 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryCallbackByRequestSn param : [{TABLE_NAME=invoice, REQUEST_SN=ea2d02eb-952c-498c-af3e-06935907ad08}]
+2021-03-20 16:13:38 |INFO  |cita-sql-pool-1 |ChainDaoImpl.java:143 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryByTxHash result:[[{ON_CHAIN=1, BLOCK_HEIGHT=0x54ef, BLOCK_TIME=120304005403, TX_HASH=ea2d02eb-952c-498c-af3e-06935907ad08}]]
+2021-03-20 16:13:38 |INFO  |cita-sql-pool-1 |ChainDaoImpl.java:150 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryByTxHash success
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |ChainDaoImpl.java:151 |com.ouyeel.obfm.sql.dao.impl.ChainDaoImpl |queryCallbackByRequestSn end
+2021-03-20 16:13:38 |INFO  |cita-sql-pool-1 |BlockChainCallBackService.java:63 |com.ouyeel.obfm.sql.util.BlockChainCallBackService |上链结果查询第[1]次，结果：[[{ON_CHAIN=1, BLOCK_HEIGHT=0x54ef, BLOCK_TIME=120304005403, TX_HASH=ea2d02eb-952c-498c-af3e-06935907ad08}]]
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |HttpUtil.java:31 |com.ouyeel.obfm.sql.util.HttpUtil |[send] start
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |HttpUtil.java:40 |com.ouyeel.obfm.sql.util.HttpUtil |request url: http://127.0.0.1:8080/callback
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |RequestAddCookies.java:123 |org.apache.http.client.protocol.RequestAddCookies |CookieSpec selected: default
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |RequestAuthCache.java:77 |org.apache.http.client.protocol.RequestAuthCache |Auth cache not set in the context
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |PoolingHttpClientConnectionManager.java:267 |org.apache.http.impl.conn.PoolingHttpClientConnectionManager |Connection request: [route: {}->http://127.0.0.1:8080][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |PoolingHttpClientConnectionManager.java:312 |org.apache.http.impl.conn.PoolingHttpClientConnectionManager |Connection leased: [id: 1][route: {}->http://127.0.0.1:8080][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |MainClientExec.java:234 |org.apache.http.impl.execchain.MainClientExec |Opening connection {}->http://127.0.0.1:8080
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |DefaultHttpClientConnectionOperator.java:139 |org.apache.http.impl.conn.DefaultHttpClientConnectionOperator |Connecting to /127.0.0.1:8080
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |DefaultHttpClientConnectionOperator.java:146 |org.apache.http.impl.conn.DefaultHttpClientConnectionOperator |Connection established 127.0.0.1:3497<->127.0.0.1:8080
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |MainClientExec.java:255 |org.apache.http.impl.execchain.MainClientExec |Executing request POST /callback HTTP/1.1
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |MainClientExec.java:260 |org.apache.http.impl.execchain.MainClientExec |Target auth state: UNCHALLENGED
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |MainClientExec.java:266 |org.apache.http.impl.execchain.MainClientExec |Proxy auth state: UNCHALLENGED
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:133 |org.apache.http.headers |http-outgoing-1 >> POST /callback HTTP/1.1
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-1 >> Content-type: application/json
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-1 >> User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-1 >> Content-Length: 96
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-1 >> Content-Type: application/json
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-1 >> Host: 127.0.0.1:8080
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-1 >> Connection: Keep-Alive
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:136 |org.apache.http.headers |http-outgoing-1 >> Accept-Encoding: gzip,deflate
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "POST /callback HTTP/1.1[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "Content-type: application/json[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "User-Agent: Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "Content-Length: 96[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "Content-Type: application/json[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "Host: 127.0.0.1:8080[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 >> "[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:87 |org.apache.http.wire |http-outgoing-1 >> "{"txTime":"120304005403","blockNumber":"0x54ef","txHash":"ea2d02eb-952c-498c-af3e-06935907ad08"}"
+2021-03-20 16:13:38 |DEBUG |http-nio-8080-exec-7 |InvoiceController.java:52 |com.ouyeel.obfm.controller.InvoiceController |============> [callback] start
+2021-03-20 16:13:38 |DEBUG |http-nio-8080-exec-7 |InvoiceController.java:53 |com.ouyeel.obfm.controller.InvoiceController |callback data: {"txTime":"120304005403","blockNumber":"0x54ef","txHash":"ea2d02eb-952c-498c-af3e-06935907ad08"}
+2021-03-20 16:13:38 |DEBUG |http-nio-8080-exec-7 |InvoiceController.java:62 |com.ouyeel.obfm.controller.InvoiceController |============> [callback] end
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 << "HTTP/1.1 200 [\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 << "Content-Type: text/plain;charset=UTF-8[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 << "Content-Length: 43[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 << "Date: Sat, 20 Mar 2021 08:13:38 GMT[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:73 |org.apache.http.wire |http-outgoing-1 << "[\r][\n]"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |Wire.java:87 |org.apache.http.wire |http-outgoing-1 << "{"msg":"[0xe5][0x9b][0x9e][0xe8][0xb0][0x83][0xe6][0x8e][0xa5][0xe6][0x94][0xb6][0xe6][0x88][0x90][0xe5][0x8a][0x9f]","success":true}"
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:122 |org.apache.http.headers |http-outgoing-1 << HTTP/1.1 200 
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:125 |org.apache.http.headers |http-outgoing-1 << Content-Type: text/plain;charset=UTF-8
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:125 |org.apache.http.headers |http-outgoing-1 << Content-Length: 43
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:125 |org.apache.http.headers |http-outgoing-1 << Date: Sat, 20 Mar 2021 08:13:38 GMT
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |MainClientExec.java:285 |org.apache.http.impl.execchain.MainClientExec |Connection can be kept alive indefinitely
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |PoolingHttpClientConnectionManager.java:344 |org.apache.http.impl.conn.PoolingHttpClientConnectionManager |Connection [id: 1][route: {}->http://127.0.0.1:8080] can be kept alive indefinitely
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |LoggingManagedHttpClientConnection.java:88 |org.apache.http.impl.conn.DefaultManagedHttpClientConnection |http-outgoing-1: set socket timeout to 0
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |PoolingHttpClientConnectionManager.java:351 |org.apache.http.impl.conn.PoolingHttpClientConnectionManager |Connection released: [id: 1][route: {}->http://127.0.0.1:8080][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |HttpUtil.java:56 |com.ouyeel.obfm.sql.util.HttpUtil |body: [{"msg":"回调接收成功","success":true}]
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |HttpUtil.java:57 |com.ouyeel.obfm.sql.util.HttpUtil |[send] end
+2021-03-20 16:13:38 |DEBUG |cita-sql-pool-1 |BlockChainCallBackService.java:114 |com.ouyeel.obfm.sql.util.BlockChainCallBackService |callback success ...
