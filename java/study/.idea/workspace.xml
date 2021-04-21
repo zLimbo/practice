@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f57ffcd6-850c-4579-aa19-8df2c374b9bc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/util/StateParse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/log/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/log/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/log/logfile.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/controller/InvoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/ChainManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/ChainManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/InvoiceChainManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/InvoiceChainManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/callback/CallbackHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/callback/CallbackHandle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/config/ChainConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/config/ChainConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/dao/IChainDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/dao/IChainDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/dao/impl/ChainDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/dao/impl/ChainDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/util/BlockChainCallBackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/java/com/ouyeel/obfm/sql/util/BlockChainCallBackService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../obfm/src/main/resources/mapper/ChainMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../obfm/src/main/resources/mapper/ChainMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/study/annotation/range/RangeCheckTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/study/annotation/range/RangeCheckTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +55,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -83,7 +68,20 @@
       <recent name="study.annotation.range" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ParseTest">
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="ArraysTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.arrays.ArraysTest" />
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="study.arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="study.collection.MapTest" />
       <module name="study" />
@@ -123,53 +121,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostJsonTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="study.json.PostJsonTest" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.redis.Test" />
       <module name="study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="study.json.*" />
+          <option name="PATTERN" value="study.redis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RangeCheckTest.rangeCheckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="study.annotation.range.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="study.annotation.range" />
-      <option name="MAIN_CLASS_NAME" value="study.annotation.range.RangeCheckTest" />
-      <option name="METHOD_NAME" value="rangeCheckTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ArraysTest" />
         <item itemvalue="Application.ParseTest" />
         <item itemvalue="Application.MapTest" />
         <item itemvalue="Application.MyList" />
-        <item itemvalue="JUnit.RangeCheckTest.rangeCheckTest" />
-        <item itemvalue="Application.PostJsonTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,6 +156,10 @@
       <workItem from="1616245349068" duration="1421000" />
       <workItem from="1616311521353" duration="1204000" />
       <workItem from="1616505775832" duration="1924000" />
+      <workItem from="1618011766200" duration="1809000" />
+      <workItem from="1618015659327" duration="1723000" />
+      <workItem from="1618560951554" duration="1655000" />
+      <workItem from="1618969663003" duration="595000" />
     </task>
     <servers />
   </component>
