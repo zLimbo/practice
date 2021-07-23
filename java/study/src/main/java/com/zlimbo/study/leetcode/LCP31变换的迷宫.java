@@ -1,10 +1,18 @@
 package com.zlimbo.study.leetcode;
 
+import java.util.Arrays;
 import java.util.List;
 
 class LCP31变换的迷宫 {
 
     class Solution {
+
+        public int search(int[] nums, int target) {
+            return (int) Arrays.stream(nums).parallel().filter(
+                    n -> n== target
+            ).count();
+        }
+
         public boolean escapeMaze(List<List<String>> maze) {
             int T = maze.size(), n = maze.get(0).size(), m = maze.get(0).get(0).length();
 

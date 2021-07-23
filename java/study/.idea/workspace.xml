@@ -6,7 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="f57ffcd6-850c-4579-aa19-8df2c374b9bc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/leetcode/LCP31变换的迷宫.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zlimbo/study/leetcode/LCP31变换的迷宫.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/annotation/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/annotation/range/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/annotation/range/Range.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/annotation/range/RangeCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/arrays/ArraysTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Block.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Chain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Net.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/PeerNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/TestChain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/blockchain/zlimbochain/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/breakpointresume/FileAccessI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/breakpointresume/FileSplitterFetch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/breakpointresume/SiteFileFetch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/breakpointresume/SiteInfoBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/breakpointresume/TestMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/breakpointresume/Utility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/collection/MapTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/digest/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/io/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/json/FieldCaseTransform.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/json/JSONObjectTest$User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/json/JSONObjectTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/json/PostJsonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/leetcode/LCP31变换的迷宫$Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/leetcode/LCP31变换的迷宫.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/number/ParseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/redis/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/string/StringTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/thread/BlockingQueueTest$Obj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/thread/BlockingQueueTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/thread/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/study/thread/ThreadPoolTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/study/annotation/range/RangeCheckTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +90,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
@@ -68,7 +104,7 @@
       <recent name="study.annotation.range" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.ConnectPostgreSQL">
     <configuration name="ArraysTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="study.arrays.ArraysTest" />
       <module name="study" />
@@ -82,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="study.collection.MapTest" />
+    <configuration name="ConnectPostgreSQL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zlimbo.study.jdbc.ConnectPostgreSQL" />
       <module name="study" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="study.collection.*" />
+          <option name="PATTERN" value="com.zlimbo.study.jdbc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,8 +131,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="study.collection.MyList" />
+    <configuration name="MapTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="study.collection.MapTest" />
       <module name="study" />
       <extension name="coverage">
         <pattern>
@@ -136,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConnectPostgreSQL" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.ArraysTest" />
         <item itemvalue="Application.ParseTest" />
         <item itemvalue="Application.MapTest" />
-        <item itemvalue="Application.MyList" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +195,18 @@
       <workItem from="1618011766200" duration="1809000" />
       <workItem from="1618015659327" duration="1723000" />
       <workItem from="1618560951554" duration="1655000" />
-      <workItem from="1618969663003" duration="595000" />
+      <workItem from="1618969663003" duration="1317000" />
+      <workItem from="1618989373074" duration="595000" />
+      <workItem from="1619163675518" duration="44000" />
+      <workItem from="1619163747509" duration="593000" />
+      <workItem from="1619167382311" duration="376000" />
+      <workItem from="1619167795420" duration="596000" />
+      <workItem from="1619319772207" duration="611000" />
+      <workItem from="1619337979934" duration="593000" />
+      <workItem from="1624261513821" duration="2398000" />
+      <workItem from="1624519305289" duration="611000" />
+      <workItem from="1624760448372" duration="947000" />
+      <workItem from="1626417199067" duration="927000" />
     </task>
     <servers />
   </component>
