@@ -4,8 +4,8 @@
 
 using namespace std;
 
-
-int main() {
+int main()
+{
 	vector<int> v{0, 1, 2, 3};
 	zl::print(v);
 	zl::print(zl::RED, v);
