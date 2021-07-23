@@ -30,4 +30,4 @@ def rmexe(path:str):
             print(path)
             os.remove(path)
 
-# rmexe('.')
+rmexe('.')

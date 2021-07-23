@@ -1,9 +1,10 @@
-package main
+package net
 
 import (
 	"fmt"
 	"net"
 	"strings"
+	"testing"
 )
 
 func GetOutBoundIP() (ip string, err error) {
@@ -18,7 +19,7 @@ func GetOutBoundIP() (ip string, err error) {
 	return
 }
 
-func TestMain() {
+func TestMain(t *testing.T) {
 	ip, err := GetOutBoundIP()
 	if err != nil {
 		fmt.Println(err)

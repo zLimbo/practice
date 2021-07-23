@@ -1,11 +1,12 @@
-package main
+package net
 
 import (
 	"fmt"
 	"net"
+	"testing"
 )
 
-func main() {
+func TestGetIp(t *testing.T) {
 	addrs, err := net.InterfaceAddrs()
 	if err != nil {
 		fmt.Println(err)

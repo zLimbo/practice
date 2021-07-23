@@ -1,4 +1,4 @@
-package main
+package net
 
 import (
 	"encoding/json"
@@ -9,29 +9,6 @@ import (
 	"os"
 	"time"
 )
-
-type MessageType int
-
-const (
-	mtRequest MessageType = iota
-	mtPrePrepare
-	mtPrepare
-	mtCommit
-	mtReply
-)
-
-type Message struct {
-	MsgType   MessageType `json:"msgType"`
-	Seq       int64       `json:"seq"`
-	NodeId    int64       `json:"nodeId"`
-	Timestamp int64       `json:"timestamp"`
-
-	Digest string `json:"digest"`
-	Sign   []byte `json:"sign"`
-
-	Ext []byte   `json:"ext"`
-	Req *Message `json:"req"`
-}
 
 func sendMsg(addr string, msg *Message) {
 	fmt.Println(addr, "send msg, seq =", msg.Seq)

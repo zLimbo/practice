@@ -1,4 +1,4 @@
-package main
+package net
 
 import (
 	"encoding/json"
@@ -6,6 +6,7 @@ import (
 	"log"
 	"net"
 	"os"
+	"testing"
 	"time"
 )
 
@@ -89,7 +90,7 @@ func server(addr string) {
 	conn.Close()
 }
 
-func main() {
+func TestConn(t *testing.T) {
 
 	name := os.Args[1]
 
