@@ -338,10 +338,10 @@ int main() {
 		cout << op << " " << num << endl;
         if (op == "+") {
             rbt.insert(stoi(num));
-        } 
+        }
 		else if (op == "-") {
             rbt.remove(stoi(num));
-        } 
+        }
 		else {
             break;
         }
