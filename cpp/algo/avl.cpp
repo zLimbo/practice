@@ -81,7 +81,7 @@ private:
         if (!tn) return new TreeNode(val, 1);
         if (val < tn->val) tn->left = insert(tn->left, val);
         else if (val > tn->val) tn->right = insert(tn->right, val);
-        
+
         updateHeight(tn);
         tn = regainBalance(tn);
 
