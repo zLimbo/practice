@@ -1,0 +1,4 @@
+S aA
+S bB
+A cS
+B d

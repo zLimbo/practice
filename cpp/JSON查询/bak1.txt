@@ -1,0 +1,128 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+
+int n, m;
+
+
+struct Object {
+	string name;
+	int kind;
+	string value1;
+	vector<Object> value2;
+
+	Object(string name_, string value1_):
+		name(name_), value1(value1_), kind(0) { }
+
+	Object(const string &name_): name(name_), kind(1) { }
+};
+
+
+Object jsonObj("json");
+vector<string> searchKeys;
+
+
+void print(Object &obj) {
+	if (obj.kind == 0) cout << "STRING " << obj.value1 << endl;
+	else cout << "OBJECT" << endl;;
+}
+
+inline void readString(string::iterator &it, string &s) {
+	while (*(++it) != '\"') {
+		if (*it == '\\') ++it;
+		s.push_back(*it);
+	}
+}
+
+Object getObj(string::iterator &it) {
+	if (*it == '\"') {
+		string name;
+		readString(it, name);
+		it += 3;
+		if (*it == '\"') {
+			string value;
+			readString(it, value);
+			return Object(name, value);
+		} else if (*it == '{') {
+			Object obj(name);
+			do {
+				obj.value2.push_back(getObj(++it));
+			} while (*(++it) == ',');
+			return obj;
+		}
+	}
+}
+
+
+void readJSON() {
+	string jsonStr;
+	for (int i = 0; i < n; ++i) {
+		string s;
+		getline(cin, s);
+		jsonStr.append(s);
+	}
+//	cout << "# " << jsonStr << endl;
+	string::iterator it = jsonStr.begin();
+
+	do {
+		jsonObj.value2.push_back(getObj(++it));
+	} while (*(++it) == ',');
+}
+
+//void printObj(Object &obj) {
+//	if (obj.kind == 0) {
+//		cout << "\"" << obj.name << "\": \"" << obj.value1 << "\","<< endl;
+//	} else {
+//		cout << obj.name << ": {" << endl;
+//		for (Object &objc: obj.value2) printObj(objc);
+//		cout << "}," << endl;
+//	}
+//}
+
+void search(string &s, Object &obj) {
+	
+	int p = 0;
+	while (p < s.size() && s[p] != '.') ++p;
+	string s1 = s.substr(0, p);
+	for (Object &objc: obj.value2) {
+		if (objc.name == s1) {
+			if (p == s.size()) print(objc);
+			else {
+				string s2 = s.substr(p+1);
+				search(s2, objc);
+			}
+			return;
+		}
+	}
+	cout << "NOTEXIST" << endl;
+}
+
+void searchJSON() {
+	for (int i = 0; i < m; ++i) {
+		string key;
+		cin >> key;
+		search(key, jsonObj);
+	}	
+}
+
+int main(int argc, char** argv) {
+
+	freopen("in.txt", "r", stdin);
+
+	cin >> n >> m;
+	cin.get();
+
+	readJSON();
+	searchJSON();
+
+
+//	cout << "{" << endl;
+//	for (Object &obj: jsonVec) {
+//		printObj(obj);
+//	}
+//	cout << "}" << endl;
+
+	return 0;
+}

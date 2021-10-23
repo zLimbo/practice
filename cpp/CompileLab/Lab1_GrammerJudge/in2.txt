@@ -1,0 +1,8 @@
+6 1
+E T
+E E+T
+T F
+T T*F
+F (E)
+F i
+i*i+i

@@ -1,0 +1,7 @@
+5 1
+S aAS
+A SbA
+A SS
+A ba
+S a
+aabbaa

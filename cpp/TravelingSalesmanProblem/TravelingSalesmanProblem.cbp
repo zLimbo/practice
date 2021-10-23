@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TravelingSalesmanProblem" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TravelingSalesmanProblem" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="10CityInput.txt" />
+		<Unit filename="11CityInput.txt" />
+		<Unit filename="12CityInput.txt" />
+		<Unit filename="13CityInput.txt" />
+		<Unit filename="14CityInput.txt" />
+		<Unit filename="31CityInput.txt" />
+		<Unit filename="4CityInput.txt" />
+		<Unit filename="5CityInput.txt" />
+		<Unit filename="6CityInput.txt" />
+		<Unit filename="include/GeneticAlgorithmForTSP.h" />
+		<Unit filename="include/Path.h" />
+		<Unit filename="include/Random.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/GeneticAlgorithmForTSP.cpp" />
+		<Unit filename="src/Path.cpp" />
+		<Unit filename="src/Random.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

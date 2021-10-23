@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: 2018_11_06_2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEF6.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/2018_11_06_2.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"G:\OpenGL\2018_11_06_2\main.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEF6.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPEF7.tmp" with contents
+[
+OpenGL32.lib GLu32.lib GLaux.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/2018_11_06_2.pdb" /debug /machine:I386 /out:"Debug/2018_11_06_2.exe" /pdbtype:sept 
+.\Debug\main.obj
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPEF7.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+Linking...
+LIBCD.lib(wincrt0.obj) : error LNK2001: unresolved external symbol _WinMain@16
+Debug/2018_11_06_2.exe : fatal error LNK1120: 1 unresolved externals
+Ö´ÐÐ link.exe Ê±³ö´í.
+
+
+
+<h3>Results</h3>
+2018_11_06_2.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

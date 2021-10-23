@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1548139876 source:e:\code\codeblock\regularexpressionmatching\main.cpp
+	<iostream>
+	<fstream>
+	<set>
+	<string.h>
+

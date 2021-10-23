@@ -1,0 +1,132 @@
+#include <iostream>
+#include <fstream>
+#include <set>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+
+struct Grammer {
+	set<char> VN;
+	set<char> VT;
+	set<pair<string, string>> P;
+	string S;
+	int type = 0;
+};
+
+
+class GrammerJudge {
+	
+Grammer G;
+const string InputFileName("in.txt");
+int _productionNum, SymbolStringNum;
+
+void buildGrammer() {
+	ifstream fin(InputFileName);
+	fin >> _productionNum >> SymbolStringNum;
+	
+	for (int i = 0; i < _productionNum; ++i) {
+		pair<string, string> p;
+		fin >> p.first >> p.second;
+		G.P.insert(p);
+		if (i == 0) G.S = p.first;
+	}
+	
+	for (auto it = G.P.begin(); it != G.P.end(); ++it) {
+		for (char ch: it->first) {
+			if (ch >= 'A' && ch <= 'Z') G.VN.insert(ch);
+			else G.VT.insert(ch);
+		}
+		for (char ch: it->second) {
+			if (ch >= 'A' && ch <= 'Z') G.VN.insert(ch);
+			else G.VT.insert(ch);
+		}
+	}
+}
+
+
+// 判断一个符号串是否符合三型文法
+// p: 该符号串， lineType: 该文法线性类型(1为左线性，2为右线性） 
+bool judge3Grammer(const pair<string, string>& p, int& linearType) {
+	if (p.second.size() == 1 && G.VT.count(p.second[0])) {	// 右边单个字符 
+		return true;
+	}
+	if (p.second.size() == 2) {	// 右边两个字符 
+		if (G.VT.count(p.second[0]) && G.VN.count(p.second[1])) {	//右线性 
+			if (linearType == 0) linearType = 1;	//根据第一个判断线性类型为右线性 
+			else if (linearType == 2) return false; // 非左右线性 
+		} else if (G.VT.count(p.second[1]) && G.VN.count(p.second[0])) {	//左线性 
+			if (linearType == 0) linearType = 1;	//根据第一个判断线性类型为左线性 
+			else if (linearType == 2) return false; // 非左右线性 
+		}	
+		return true;
+	} 
+	return false; 
+}
+
+
+// 判断文法类型 
+void judgeGrammerType() {
+	bool is1G = true, is2G = true, is3G = true;
+	int linearType = 0; 
+	for (auto it = G.P.begin(); it != G.P.end(); ++it) {	// 对每个产生式进行判断 
+		const pair<string, string> &p = *it;
+		if (is1G) {
+			if (p.first.size() <= p.second.size()) {	// 1型文法判断 
+			 	if (is2G) {
+				 	if (p.first.size() == 1) {// 2型文法判断 
+						if (is3G) 	// 3型文法判断 
+							is3G = judge3Grammer(p, linearType);
+					} else {
+						is2G = is3G = false;
+					}
+				}
+			} else {
+				is1G = is2G = is3G = false;
+			}
+		}
+	}
+	if (is3G) G.type = 3;
+	else if (is2G) G.type = 2;
+	else if (is1G) G.type = 1;
+	else G.type = 0;
+}
+
+
+void printGrammer() {
+	cout << "文法 G(VN, VT, P, S)" << endl;
+	cout << "VN = { ";
+	for (auto it = G.VN.begin(); it != G.VN.end(); ++it) {
+		cout << *it << ", ";
+	}
+	cout << "}" << endl;
+	cout << "VT = { ";
+	for (auto it = G.VT.begin(); it != G.VT.end(); ++it) {
+		cout << *it << ", ";
+	}
+	cout << "}" << endl;
+	cout << "Productions = {" << endl;
+	for (auto it = G.P.begin(); it != G.P.end(); ++it) {
+		cout << "\t" << it->first << "->" << it->second << "," << endl;;
+	}
+	cout << "}" << endl;
+	cout << "S = " << G.S << endl;
+	
+	cout << "该文法是";
+	for (int i = 0; i <= G.type; ++i) {
+		cout << i << "、";
+	}
+	cout << "型文法" << endl; 
+}
+
+
+int main(int argc, char** argv) {
+		
+	buildGrammer();
+	judgeGrammerType();
+	judgeSymbolString(); 
+	printGrammer();
+	
+	return 0;
+}

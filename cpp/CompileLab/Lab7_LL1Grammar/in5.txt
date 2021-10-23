@@ -1,0 +1,6 @@
+S Ap
+S Bq
+A dAp
+A d
+B eBq
+B e

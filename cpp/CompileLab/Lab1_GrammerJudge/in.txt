@@ -1,0 +1,13 @@
+8 4
+S aB
+S bA
+A a
+A aS
+A bAA
+B b
+B bS
+B aBB
+aaBB
+abbbaa
+aabbaabbaa
+aaBBB

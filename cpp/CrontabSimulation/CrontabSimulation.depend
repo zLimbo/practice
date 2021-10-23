@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1554987071 source:e:\code\codeblock\crontabsimulation\main.cpp
+	"SimulateModule.h"
+	"IOModule.h"
+	<iostream>
+
+1554986721 e:\code\codeblock\crontabsimulation\simulatemodule.h
+	"TimeModule.h"
+	"ScheduleModule.h"
+	<iostream>
+
+1554987254 e:\code\codeblock\crontabsimulation\timemodule.h
+	<unordered_map>
+
+1554985576 e:\code\codeblock\crontabsimulation\schedulemodule.h
+	"TimeModule.h"
+	<sstream>
+	<algorithm>
+	<iostream>
+
+1554986547 e:\code\codeblock\crontabsimulation\iomodule.h
+	"SimulateModule.h"
+	"ScheduleModule.h"
+	<fstream>
+	<sstream>
+	<string>
+

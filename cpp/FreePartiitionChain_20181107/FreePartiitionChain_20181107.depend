@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1541595313 source:g:\codeblock\freepartiitionchain_20181107\main.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<vector>
+	<ctime>
+

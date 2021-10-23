@@ -1,0 +1,13 @@
+6 6
+A B
+A A+B
+B C
+B B*C
+C (A)
+C i
+i
+(i)
+i*i
+i*i+i
+i+(i+i)
+i+i*i

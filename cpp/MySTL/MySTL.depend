@@ -1,0 +1,425 @@
+# depslib dependency file v1.0
+1512313399 source:/home/dora/coding/codeblocks/MySTL/main.cpp
+	<iostream>
+	<string>
+	"Vector.h"
+	"List.h"
+	"Stack.h"
+	"Queue.h"
+	"EightQueen.h"
+	"Labyrinth.h"
+	"BankCustoms.h"
+	"BinTree.h"
+	"Bitmap.h"
+	"Graph.h"
+	"BST.h"
+	"AVL.h"
+	"Splay.h"
+	"GraphMatrix.h"
+	"B-Tree.h"
+	<fstream>
+	<algorithm>
+	<iostream>
+	<cstdio>
+
+1511875911 /home/dora/coding/codeblocks/MySTL/Vector.h
+	<stdexcept>
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510984604 /home/dora/coding/codeblocks/MySTL/List.h
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1511009967 /home/dora/coding/codeblocks/MySTL/Stack.h
+	"Vector.h"
+
+1510984434 /home/dora/coding/codeblocks/MySTL/Queue.h
+	"List.h"
+
+1511015986 source:/home/dora/coding/codeblocks/MySTL/EightQueen.cpp
+	"Stack.h"
+
+1511015986 /home/dora/coding/codeblocks/MySTL/EightQueen.cpp
+	"Stack.h"
+
+1511192711 /home/dora/coding/codeblocks/MySTL/EightQueen.h
+	"Stack.h"
+
+1511073359 /home/dora/coding/codeblocks/MySTL/Labyrinth.h
+	"Stack.h"
+	<cstdlib>
+	<ctime>
+
+1511091751 /home/dora/coding/codeblocks/MySTL/BankCustoms.h
+	"Queue.h"
+	<cstdlib>
+	<ctime>
+
+1512223468 /home/dora/coding/codeblocks/MySTL/BinTree.h
+	<algorithm>
+	<stdio.h>
+	<iostream>
+	"Stack.h"
+	"Queue.h"
+
+1511597271 /home/dora/coding/codeblocks/MySTL/Bitmap.h
+	<cstdio>
+	<cstring>
+
+1511877105 /home/dora/coding/codeblocks/MySTL/Graph.h
+	"Stack.h"
+	"Queue.h"
+	"limits.h"
+
+1511602035 /home/dora/coding/codeblocks/MySTL/GraphMatrix.h
+	"Graph.h"
+	"Vector.h"
+
+1511975251 /home/dora/coding/codeblocks/MySTL/BST.h
+	"BinTree.h"
+
+1511970668 /home/dora/coding/codeblocks/MySTL/AVL.h
+	"BST.h"
+
+1511976950 /home/dora/coding/codeblocks/MySTL/Splay.h
+	"BST.h"
+
+1512313413 /home/dora/coding/codeblocks/MySTL/B-Tree.h
+	"Vector.h"
+
+1515376174 source:e:\dora\mystl\main.cpp
+	<iostream>
+	<string>
+	"Vector.h"
+	"List.h"
+	"Stack.h"
+	"Queue.h"
+	"EightQueen.h"
+	"Labyrinth.h"
+	"BankCustoms.h"
+	"BinTree.h"
+	"Bitmap.h"
+	"Graph.h"
+	"BST.h"
+	"AVL.h"
+	"Splay.h"
+	"GraphMatrix.h"
+	"B-Tree.h"
+	<fstream>
+	<algorithm>
+	<iostream>
+	<cstdio>
+
+1511847110 e:\dora\mystl\vector.h
+	<stdexcept>
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510955804 e:\dora\mystl\list.h
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510981166 e:\dora\mystl\stack.h
+	"Vector.h"
+
+1510955634 e:\dora\mystl\queue.h
+	"List.h"
+
+1511163910 e:\dora\mystl\eightqueen.h
+	"Stack.h"
+
+1511044558 e:\dora\mystl\labyrinth.h
+	"Stack.h"
+	<cstdlib>
+	<ctime>
+
+1511062950 e:\dora\mystl\bankcustoms.h
+	"Queue.h"
+	<cstdlib>
+	<ctime>
+
+1512194668 e:\dora\mystl\bintree.h
+	<algorithm>
+	<stdio.h>
+	<iostream>
+	"Stack.h"
+	"Queue.h"
+
+1511568470 e:\dora\mystl\bitmap.h
+	<cstdio>
+	<cstring>
+
+1511848304 e:\dora\mystl\graph.h
+	"Stack.h"
+	"Queue.h"
+	"limits.h"
+
+1511946450 e:\dora\mystl\bst.h
+	"BinTree.h"
+
+1511941868 e:\dora\mystl\avl.h
+	"BST.h"
+
+1511948150 e:\dora\mystl\splay.h
+	"BST.h"
+
+1511573234 e:\dora\mystl\graphmatrix.h
+	"Graph.h"
+	"Vector.h"
+
+1515376174 e:\dora\mystl\b-tree.h
+	"Vector.h"
+
+1515376174 source:e:\mystl\main.cpp
+	<iostream>
+	<string>
+	"Vector.h"
+	"List.h"
+	"Stack.h"
+	"Queue.h"
+	"EightQueen.h"
+	"Labyrinth.h"
+	"BankCustoms.h"
+	"BinTree.h"
+	"Bitmap.h"
+	"Graph.h"
+	"BST.h"
+	"AVL.h"
+	"Splay.h"
+	"GraphMatrix.h"
+	"B-Tree.h"
+	<fstream>
+	<algorithm>
+	<iostream>
+	<cstdio>
+
+1511847110 e:\mystl\vector.h
+	<stdexcept>
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510955804 e:\mystl\list.h
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510981166 e:\mystl\stack.h
+	"Vector.h"
+
+1510955634 e:\mystl\queue.h
+	"List.h"
+
+1511163910 e:\mystl\eightqueen.h
+	"Stack.h"
+
+1511044558 e:\mystl\labyrinth.h
+	"Stack.h"
+	<cstdlib>
+	<ctime>
+
+1511062950 e:\mystl\bankcustoms.h
+	"Queue.h"
+	<cstdlib>
+	<ctime>
+
+1512194668 e:\mystl\bintree.h
+	<algorithm>
+	<stdio.h>
+	<iostream>
+	"Stack.h"
+	"Queue.h"
+
+1511568470 e:\mystl\bitmap.h
+	<cstdio>
+	<cstring>
+
+1511848304 e:\mystl\graph.h
+	"Stack.h"
+	"Queue.h"
+	"limits.h"
+
+1511946450 e:\mystl\bst.h
+	"BinTree.h"
+
+1511941868 e:\mystl\avl.h
+	"BST.h"
+
+1511948150 e:\mystl\splay.h
+	"BST.h"
+
+1511573234 e:\mystl\graphmatrix.h
+	"Graph.h"
+	"Vector.h"
+
+1516500423 e:\mystl\b-tree.h
+	"Vector.h"
+	"Vector.h"
+
+1526649872 source:e:\a_limbo\mystl\main.cpp
+	<iostream>
+	<string>
+	"Vector.h"
+	"List.h"
+	"Stack.h"
+	"Queue.h"
+	"EightQueen.h"
+	"Labyrinth.h"
+	"BankCustoms.h"
+	"BinTree.h"
+	"Bitmap.h"
+	"Graph.h"
+	"BST.h"
+	"AVL.h"
+	"Splay.h"
+	"GraphMatrix.h"
+	<fstream>
+	<algorithm>
+	<iostream>
+	<cstdio>
+
+1521976846 e:\a_limbo\mystl\vector.h
+	<stdexcept>
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510955804 e:\a_limbo\mystl\list.h
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510981166 e:\a_limbo\mystl\stack.h
+	"Vector.h"
+
+1510955634 e:\a_limbo\mystl\queue.h
+	"List.h"
+
+1511163910 e:\a_limbo\mystl\eightqueen.h
+	"Stack.h"
+
+1511044558 e:\a_limbo\mystl\labyrinth.h
+	"Stack.h"
+	<cstdlib>
+	<ctime>
+
+1511062950 e:\a_limbo\mystl\bankcustoms.h
+	"Queue.h"
+	<cstdlib>
+	<ctime>
+
+1512194668 e:\a_limbo\mystl\bintree.h
+	<algorithm>
+	<stdio.h>
+	<iostream>
+	"Stack.h"
+	"Queue.h"
+
+1511568470 e:\a_limbo\mystl\bitmap.h
+	<cstdio>
+	<cstring>
+
+1511848304 e:\a_limbo\mystl\graph.h
+	"Stack.h"
+	"Queue.h"
+	"limits.h"
+
+1511946450 e:\a_limbo\mystl\bst.h
+	"BinTree.h"
+
+1511941868 e:\a_limbo\mystl\avl.h
+	"BST.h"
+
+1511948150 e:\a_limbo\mystl\splay.h
+	"BST.h"
+
+1511573234 e:\a_limbo\mystl\graphmatrix.h
+	"Graph.h"
+	"Vector.h"
+
+1526649874 source:e:\code\codeblock\mystl\main.cpp
+	<iostream>
+	<string>
+	"Vector.h"
+	"List.h"
+	"Stack.h"
+	"Queue.h"
+	"EightQueen.h"
+	"Labyrinth.h"
+	"BankCustoms.h"
+	"BinTree.h"
+	"Bitmap.h"
+	"Graph.h"
+	"BST.h"
+	"AVL.h"
+	"Splay.h"
+	"GraphMatrix.h"
+	<fstream>
+	<algorithm>
+	<iostream>
+	<cstdio>
+
+1521976848 e:\code\codeblock\mystl\vector.h
+	<stdexcept>
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510955804 e:\code\codeblock\mystl\list.h
+	<cstdlib>
+	<algorithm>
+	<ctime>
+
+1510981166 e:\code\codeblock\mystl\stack.h
+	"Vector.h"
+
+1510955634 e:\code\codeblock\mystl\queue.h
+	"List.h"
+
+1511163910 e:\code\codeblock\mystl\eightqueen.h
+	"Stack.h"
+
+1511044558 e:\code\codeblock\mystl\labyrinth.h
+	"Stack.h"
+	<cstdlib>
+	<ctime>
+
+1511062950 e:\code\codeblock\mystl\bankcustoms.h
+	"Queue.h"
+	<cstdlib>
+	<ctime>
+
+1512194668 e:\code\codeblock\mystl\bintree.h
+	<algorithm>
+	<stdio.h>
+	<iostream>
+	"Stack.h"
+	"Queue.h"
+
+1511568470 e:\code\codeblock\mystl\bitmap.h
+	<cstdio>
+	<cstring>
+
+1511848304 e:\code\codeblock\mystl\graph.h
+	"Stack.h"
+	"Queue.h"
+	"limits.h"
+
+1511946450 e:\code\codeblock\mystl\bst.h
+	"BinTree.h"
+
+1511941868 e:\code\codeblock\mystl\avl.h
+	"BST.h"
+
+1511948150 e:\code\codeblock\mystl\splay.h
+	"BST.h"
+
+1511573234 e:\code\codeblock\mystl\graphmatrix.h
+	"Graph.h"
+	"Vector.h"
+

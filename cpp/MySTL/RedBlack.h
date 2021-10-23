@@ -1,0 +1,6 @@
+#ifndef REDBLACK_H_INCLUDED
+#define REDBLACK_H_INCLUDED
+
+
+
+#endif // REDBLACK_H_INCLUDED

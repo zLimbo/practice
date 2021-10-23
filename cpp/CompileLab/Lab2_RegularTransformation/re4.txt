@@ -1,0 +1,1 @@
+(aeb|bcd)*(a(a|a(ec)*b)|b(ce)*cb)

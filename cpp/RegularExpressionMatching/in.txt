@@ -1,0 +1,8 @@
+aaa ab*a*c*a
+a ab*
+ab .*c
+a .*..a*
+mississippi mis*is*ip*.
+mississippi mis*is*p*.
+aa a*
+aa a

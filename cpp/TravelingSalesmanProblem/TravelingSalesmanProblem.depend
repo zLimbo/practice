@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1542941580 source:g:\codeblock\travelingsalesmanproblem\src\geneticalgorithmfortsp.cpp
+	"GeneticAlgorithmForTSP.h"
+	"Random.h"
+	<iostream>
+	<iomanip>
+	<fstream>
+	<sstream>
+	<algorithm>
+	<stack>
+	<vector>
+
+1542937752 g:\codeblock\travelingsalesmanproblem\include\geneticalgorithmfortsp.h
+	<string>
+	<vector>
+	"Path.h"
+
+1542937153 g:\codeblock\travelingsalesmanproblem\include\path.h
+	<vector>
+
+1542873078 g:\codeblock\travelingsalesmanproblem\include\random.h
+	<cstdlib>
+
+1542877221 source:g:\codeblock\travelingsalesmanproblem\src\path.cpp
+	"Path.h"
+	<iostream>
+	<vector>
+
+1542873070 source:g:\codeblock\travelingsalesmanproblem\src\random.cpp
+	"Random.h"
+
+1542941653 source:g:\codeblock\travelingsalesmanproblem\main.cpp
+	<iostream>
+	<ctime>
+	"GeneticAlgorithmForTSP.h"
+
+1542941580 source:e:\code\codeblock\travelingsalesmanproblem\src\geneticalgorithmfortsp.cpp
+	"GeneticAlgorithmForTSP.h"
+	"Random.h"
+	<iostream>
+	<iomanip>
+	<fstream>
+	<sstream>
+	<algorithm>
+	<stack>
+	<vector>
+
+1542937752 e:\code\codeblock\travelingsalesmanproblem\include\geneticalgorithmfortsp.h
+	<string>
+	<vector>
+	"Path.h"
+
+1542937153 e:\code\codeblock\travelingsalesmanproblem\include\path.h
+	<vector>
+
+1542873078 e:\code\codeblock\travelingsalesmanproblem\include\random.h
+	<cstdlib>
+
+1542877221 source:e:\code\codeblock\travelingsalesmanproblem\src\path.cpp
+	"Path.h"
+	<iostream>
+	<vector>
+
+1542873070 source:e:\code\codeblock\travelingsalesmanproblem\src\random.cpp
+	"Random.h"
+

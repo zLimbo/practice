@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1542373779 source:g:\codeblock\calculator\main.cpp
+	<iostream>
+	<string>
+	<map>
+	<stack>
+	<utility>
+	<algorithm>
+

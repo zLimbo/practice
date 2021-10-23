@@ -1,0 +1,11 @@
+7 3
+S aSBE
+S aBE
+EB BE
+aB ab
+bB bb
+bE be
+eE ee
+aaBBEE
+aaaBBBEEE
+aaaaBBEEE

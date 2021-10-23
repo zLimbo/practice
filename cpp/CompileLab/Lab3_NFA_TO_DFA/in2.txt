@@ -1,0 +1,13 @@
+S
+Z
+S V 0
+S U 1
+S Q 0
+S Q 1
+V Z 0
+U Z 1
+Q V 0
+Q U 1
+Q Q 1
+Z Z 0
+Z Z 1

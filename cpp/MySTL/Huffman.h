@@ -1,0 +1,6 @@
+#ifndef HUFFMAN_H_INCLUDED
+#define HUFFMAN_H_INCLUDED
+
+
+
+#endif // HUFFMAN_H_INCLUDED

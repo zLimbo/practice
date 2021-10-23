@@ -1,0 +1,6 @@
+S pA
+S qB
+A cAd
+A a
+B dB
+B b

@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1560169221 source:e:\code\codeblock\lr0grammar\lr0grammar.cpp
+	"LR0Grammar.h"
+	<fstream>
+	<iostream>
+	<set>
+	<vector>
+	<string>
+	<algorithm>
+
+1560178008 e:\code\codeblock\lr0grammar\lr0grammar.h
+	<unordered_set>
+	<unordered_map>
+	<set>
+	<map>
+	<string>
+	<vector>
+	<queue>
+
+1560152150 source:e:\code\codeblock\lr0grammar\main.cpp
+	"LR0Grammar.h"
+	<iostream>
+
